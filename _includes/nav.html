@@ -1,0 +1,23 @@
+{% assign p = page.url %}
+<nav>
+  <a href="{{ '/' | relative_url }}" class="logo">REFL<span>E</span>KT</a>
+
+  {% if page.nav_variant == 'back' %}
+    <a href="{{ page.nav_back_url | relative_url }}" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      {{ page.nav_back_text }}
+    </a>
+    {% if page.nav_cta_url %}
+      <a href="{{ page.nav_cta_url }}" class="nav-cta">{{ page.nav_cta_text | default: 'Contact Us' }}</a>
+    {% endif %}
+  {% else %}
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}"{% if p == '/' %} class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ '/services/' | relative_url }}"{% if p contains '/services' %} class="active"{% endif %}>Services</a></li>
+      <li><a href="{{ '/subscriptions/' | relative_url }}"{% if p contains '/subscriptions' %} class="active"{% endif %}>Plans</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="mailto:{{ site.email }}">Contact</a></li>
+    </ul>
+    <a href="{{ '/booking/' | relative_url }}" class="nav-cta{% if p contains '/booking' %} active{% endif %}">Book Now</a>
+  {% endif %}
+</nav>

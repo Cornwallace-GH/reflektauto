@@ -1,0 +1,29 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+<meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
+{% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}">{% endif %}
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.canonical | default: site.url }}">
+<meta property="og:title" content="{{ page.og_title | default: page.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description }}">
+<meta property="og:image" content="{{ site.url }}/hero-bg.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
+<meta name="twitter:image" content="{{ site.url }}/hero-bg.jpg">
+
+{% if page.structured_data %}
+<script type="application/ld+json">{{ page.structured_data }}</script>
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>

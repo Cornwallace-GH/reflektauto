@@ -1,0 +1,101 @@
+---
+layout: default
+title: "Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA"
+description: "Book your mobile detailing appointment with Reflekt Auto Care online. Choose your service, pick a time, and we come to you anywhere in North Atlanta, GA."
+keywords: "book mobile detailing Atlanta, schedule car detail North Atlanta, online auto detailing booking Georgia"
+canonical: "https://www.reflektautocare.com/booking"
+og_description: "Schedule your professional mobile detailing appointment online. Reflekt Auto Care comes to you across North Atlanta, GA."
+---
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">North Atlanta, GA — Schedule Your Visit</span></div>
+    <h1>Book Your Detail</h1>
+    <p>Select a date and time that works for you. We'll confirm your appointment and reach out with any questions before your visit.</p>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-item"><div class="trust-dot"></div><span>Book &amp; Pay in One Step</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Instant Confirmation</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Free Cancellation</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Secured by Square</span></div>
+</div>
+
+<div class="booking-section">
+  <div class="booking-layout">
+
+    <!-- Square Appointments embed
+         Replace YOUR_SQUARE_APPOINTMENTS_URL with your actual Square booking URL:
+         Square Dashboard → Appointments → Booking Sites
+         URL format: https://square.site/book/XXXXXXX/reflekt-auto-care -->
+    <div class="square-wrap" id="square-booking-wrap">
+      <iframe
+        id="square-booking-frame"
+        src="YOUR_SQUARE_APPOINTMENTS_URL"
+        title="Book an appointment with Reflekt Auto Care"
+        allow="payment"
+        loading="lazy">
+      </iframe>
+      <div class="square-wrap-fallback" id="square-fallback">
+        <p>Click below to open the booking page and pay your deposit — all in one step through Square.</p>
+        <a href="YOUR_SQUARE_APPOINTMENTS_URL" class="sq-book-btn" target="_blank" rel="noopener">
+          Book &amp; Pay Now &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <div class="info-eyebrow"><div class="info-eyebrow-line"></div><span class="info-eyebrow-text">How It Works</span></div>
+      <h2 class="info-title">Simple.<br>Fast.<br>Confirmed.</h2>
+      <p class="info-desc">Choose your service, pick a time, and pay your deposit — all in one seamless step through Square. No redirects, no extra forms.</p>
+      <div class="steps-mini">
+        <div class="step-mini">
+          <div class="step-mini-n">01</div>
+          <div class="step-mini-body"><h4>Choose a Service</h4><p>Select the detail package that fits your vehicle and needs.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">02</div>
+          <div class="step-mini-body"><h4>Pick Your Time</h4><p>Choose any open slot in the calendar that works for your schedule.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">03</div>
+          <div class="step-mini-body"><h4>Pay &amp; Confirm</h4><p>A small deposit is collected securely through Square to lock in your appointment.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">04</div>
+          <div class="step-mini-body"><h4>We Come to You</h4><p>Our technician arrives at your location in North Atlanta. You sit back and enjoy.</p></div>
+        </div>
+      </div>
+      <div class="info-note">
+        <p><strong>Questions before booking?</strong> Email or call us directly and we'll help you choose the right service for your vehicle and budget.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Have a question about a service first?</h2>
+  <a href="{{ '/services/' | relative_url }}" class="btn-black">View Services &rarr;</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const frame = document.getElementById('square-booking-frame');
+    const fallback = document.getElementById('square-fallback');
+    if (!frame) return;
+    const src = frame.getAttribute('src') || '';
+    if (src.includes('YOUR_SQUARE_APPOINTMENTS_URL') || src === '' || src === '#') {
+      frame.style.display = 'none';
+      if (fallback) {
+        fallback.style.display = 'block';
+        const fallbackLink = fallback.querySelector('a');
+        if (fallbackLink) fallbackLink.href = '#';
+      }
+    } else {
+      if (fallback) fallback.style.display = 'none';
+      frame.style.display = 'block';
+    }
+  });
+</script>

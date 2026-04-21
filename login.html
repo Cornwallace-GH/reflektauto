@@ -1,0 +1,129 @@
+---
+layout: login
+title: "Client Portal — Reflekt Auto Care"
+description: "Log in to your Reflekt Auto Care client portal to view appointment history, manage your subscription, and access exclusive member pricing."
+robots: "noindex, nofollow"
+chatbot: false
+---
+
+<div class="portal-layout">
+
+  <div class="portal-left">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Client Portal</span></div>
+    <h2>Your Reflekt<br>Account.</h2>
+    <p>A client account gives you a full view of your service history, easy rebooking, and access to member-exclusive perks — all in one place.</p>
+    <ul class="portal-perks">
+      <li>
+        <div class="perk-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div><div class="perk-text-title">Appointment History</div><p class="perk-text-desc">View every past service, what was done, and when — always at your fingertips.</p></div>
+      </li>
+      <li>
+        <div class="perk-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div><div class="perk-text-title">Easy Rebooking</div><p class="perk-text-desc">Rebook your last service in one click — no need to re-enter your vehicle info.</p></div>
+      </li>
+      <li>
+        <div class="perk-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div><div class="perk-text-title">Member Pricing</div><p class="perk-text-desc">Logged-in clients get early access to promotions and member-only discounts.</p></div>
+      </li>
+      <li>
+        <div class="perk-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><div class="perk-text-title">Subscription Management</div><p class="perk-text-desc">View, change, or pause your recurring plan from your dashboard at any time.</p></div>
+      </li>
+    </ul>
+    <div class="skip-note">
+      No account? No problem — you don't need one to book a service.<br>
+      <a href="{{ '/booking/' | relative_url }}">Book as a guest instead &rarr;</a>
+    </div>
+  </div>
+
+  <div class="portal-right">
+
+    <div class="auth-box" id="auth-box">
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchTab('login')">Log In</button>
+        <button class="auth-tab" onclick="switchTab('register')">Create Account</button>
+      </div>
+
+      <div class="auth-form active" id="form-login">
+        <div class="auth-title">Welcome Back</div>
+        <div class="auth-sub">Log in to your Reflekt client account.</div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+        <div class="fg"><label>Password</label><input type="password" placeholder="••••••••"></div>
+        <a href="#" class="forgot">Forgot your password?</a>
+        <button class="auth-btn" onclick="simulateLogin()">Log In</button>
+        <div class="auth-divider">
+          <div class="auth-divider-line"></div><div class="auth-divider-text">or</div><div class="auth-divider-line"></div>
+        </div>
+        <button class="auth-google-btn" onclick="simulateLogin()">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.26 9.77A7.24 7.24 0 0 1 12 4.75c1.73 0 3.29.62 4.52 1.64l3.37-3.37A12 12 0 0 0 12 0 12 12 0 0 0 1.04 6.48l4.22 3.29z"/><path fill="#34A853" d="M16.04 18.01A7.15 7.15 0 0 1 12 19.25c-2.92 0-5.43-1.74-6.65-4.27l-4.26 3.29A12 12 0 0 0 12 24a12 12 0 0 0 8.1-3.12l-4.06-2.87z"/><path fill="#4A90D9" d="M20.1 12.23c0-.64-.06-1.25-.17-1.85H12v3.51h4.55a3.87 3.87 0 0 1-1.68 2.55l4.06 2.87C20.61 17.5 21.1 15 21.1 12.23H20.1z"/><path fill="#FBBC05" d="M5.35 14.98A7.25 7.25 0 0 1 4.75 12c0-1.04.18-2.04.5-2.98L1.04 6.48A12 12 0 0 0 0 12c0 1.93.46 3.76 1.04 5.52l4.31-2.54z"/></svg>
+          Continue with Google
+        </button>
+      </div>
+
+      <div class="auth-form" id="form-register">
+        <div class="auth-title">Create Account</div>
+        <div class="auth-sub">Set up your Reflekt client account — free, no commitment.</div>
+        <div class="fg-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="First"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Last"></div>
+        </div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(404) 555-0100"></div>
+        <div class="fg">
+          <label>Password</label>
+          <input type="password" placeholder="Create a strong password">
+          <div class="password-hint">At least 8 characters with a number or symbol.</div>
+        </div>
+        <button class="auth-btn" onclick="simulateLogin()" style="margin-top:8px">Create Account</button>
+        <div class="auth-divider">
+          <div class="auth-divider-line"></div><div class="auth-divider-text">or</div><div class="auth-divider-line"></div>
+        </div>
+        <button class="auth-google-btn" onclick="simulateLogin()">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.26 9.77A7.24 7.24 0 0 1 12 4.75c1.73 0 3.29.62 4.52 1.64l3.37-3.37A12 12 0 0 0 12 0 12 12 0 0 0 1.04 6.48l4.22 3.29z"/><path fill="#34A853" d="M16.04 18.01A7.15 7.15 0 0 1 12 19.25c-2.92 0-5.43-1.74-6.65-4.27l-4.26 3.29A12 12 0 0 0 12 24a12 12 0 0 0 8.1-3.12l-4.06-2.87z"/><path fill="#4A90D9" d="M20.1 12.23c0-.64-.06-1.25-.17-1.85H12v3.51h4.55a3.87 3.87 0 0 1-1.68 2.55l4.06 2.87C20.61 17.5 21.1 15 21.1 12.23H20.1z"/><path fill="#FBBC05" d="M5.35 14.98A7.25 7.25 0 0 1 4.75 12c0-1.04.18-2.04.5-2.98L1.04 6.48A12 12 0 0 0 0 12c0 1.93.46 3.76 1.04 5.52l4.31-2.54z"/></svg>
+          Sign up with Google
+        </button>
+      </div>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+      <div class="dash-welcome">Welcome Back, Cornwallace</div>
+      <div class="dash-sub">Here's a look at your account.</div>
+      <div class="dash-cards">
+        <div class="dash-card"><div class="dash-card-label">Total Services</div><div class="dash-card-value">7</div><div class="dash-card-sub">Since Jan 2026</div></div>
+        <div class="dash-card"><div class="dash-card-label">Active Plan</div><div class="dash-card-value">Monthly</div><div class="dash-card-sub">Next visit: Apr 22</div></div>
+      </div>
+      <div class="dash-section-title">Recent &amp; Upcoming</div>
+      <div class="dash-appointment">
+        <div><div class="appt-service">Full Detail — Gold</div><div class="appt-date">April 22, 2026</div></div>
+        <div class="appt-status upcoming">Upcoming</div>
+      </div>
+      <div class="dash-appointment">
+        <div><div class="appt-service">Exterior Detail — Platinum</div><div class="appt-date">March 28, 2026</div></div>
+        <div class="appt-status completed">Completed</div>
+      </div>
+      <div class="dash-appointment">
+        <div><div class="appt-service">Interior Detail — Gold</div><div class="appt-date">February 14, 2026</div></div>
+        <div class="appt-status completed">Completed</div>
+      </div>
+      <a href="{{ '/booking/' | relative_url }}" class="dash-book-btn">Book Another Service</a>
+      <a href="#" class="dash-logout" onclick="logout()">Log Out</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.auth-tab').forEach((t, i) => t.classList.toggle('active', (i === 0 && tab === 'login') || (i === 1 && tab === 'register')));
+    document.getElementById('form-login').classList.toggle('active', tab === 'login');
+    document.getElementById('form-register').classList.toggle('active', tab === 'register');
+  }
+  function simulateLogin() {
+    document.getElementById('auth-box').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+  }
+  function logout() {
+    document.getElementById('dashboard').style.display = 'none';
+    document.getElementById('auth-box').style.display = 'block';
+  }
+</script>

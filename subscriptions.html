@@ -1,0 +1,183 @@
+---
+layout: default
+title: "Subscription Plans — Reflekt Auto Care | Mobile Detailing North Atlanta, GA"
+description: "Keep your vehicle looking its best year-round with Reflekt Auto Care's recurring detail plans. Choose Weekly, Bi-Weekly, or Monthly — and save every time."
+keywords: "recurring car detail Atlanta, monthly car detailing North Atlanta, auto detailing subscription Georgia, weekly car wash Atlanta"
+canonical: "https://www.reflektautocare.com/subscriptions"
+og_description: "Keep your vehicle looking its best year-round with Reflekt Auto Care's recurring detail plans. Choose Weekly, Bi-Weekly, or Monthly."
+---
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Recurring Plans</span></div>
+    <h1>Always Clean.<br>Always Ready.</h1>
+    <p>A vehicle that's consistently maintained always looks better and holds its value longer. Our subscription plans lock in priority scheduling and recurring savings — so your car is never more than a week away from perfect.</p>
+  </div>
+</div>
+
+<div class="vehicle-bar">
+  <span class="vehicle-label">Vehicle Size:</span>
+  <div class="vehicle-btns">
+    <button class="vehicle-btn active" onclick="setVehicle(0)">Sedan / Coupe</button>
+    <button class="vehicle-btn" onclick="setVehicle(1)">SUV / Crossover</button>
+    <button class="vehicle-btn" onclick="setVehicle(2)">Truck / Large SUV</button>
+  </div>
+</div>
+
+<div class="plans-section">
+  <div class="plans-intro">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Choose Your Plan</span></div>
+    <h2 class="section-title">Consistent Care.<br>Real Savings.</h2>
+    <p class="section-sub">Every plan includes a dedicated appointment slot, priority scheduling, and a discount off standard rates — the more frequently we come, the more you save.</p>
+  </div>
+
+  <div class="plans-grid">
+
+    <div class="plan-card" id="plan-weekly">
+      <div class="plan-freq">Weekly</div>
+      <div class="plan-name">Weekly Detail</div>
+      <p class="plan-desc">For vehicles that are driven daily and need to look their best at all times — a thorough hand wash, interior wipe-down, and gloss finish every week.</p>
+      <div class="plan-price">
+        <div class="plan-price-num" id="price-weekly">$65</div>
+        <div class="plan-price-unit">/ visit</div>
+      </div>
+      <div class="plan-savings" id="savings-weekly">Save ~15% vs. standard rate</div>
+      <hr class="plan-divider">
+      <div class="plan-includes-label">Every Visit Includes</div>
+      <ul class="plan-includes">
+        <li><div class="check-circle"><div class="check-mark"></div></div>Safe two-bucket hand wash and rinse</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Wheel face and tire cleaned + dressed</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Exterior glass cleaned streak-free</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Interior vacuum and surface wipe-down</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Quick-detail gloss spray applied</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Priority scheduling — same weekly slot</li>
+      </ul>
+      <a href="{{ '/booking/' | relative_url }}" class="plan-btn plan-btn-outline">Get Started</a>
+    </div>
+
+    <div class="plan-card featured" id="plan-biweekly">
+      <div class="plan-badge">Most Popular</div>
+      <div class="plan-freq">Bi-Weekly</div>
+      <div class="plan-name">Bi-Weekly Detail</div>
+      <p class="plan-desc">The perfect balance — a full exterior and interior detail every two weeks to keep your vehicle consistently clean without the weekly commitment.</p>
+      <div class="plan-price">
+        <div class="plan-price-num" id="price-biweekly">$90</div>
+        <div class="plan-price-unit">/ visit</div>
+      </div>
+      <div class="plan-savings" id="savings-biweekly">Save ~10% vs. standard rate</div>
+      <hr class="plan-divider">
+      <div class="plan-includes-label">Every Visit Includes</div>
+      <ul class="plan-includes">
+        <li><div class="check-circle"><div class="check-mark"></div></div>Full two-bucket hand wash and rinse</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Wheel barrel and tire cleaned + dressed</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Door jambs and exterior glass cleaned</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Full interior vacuum and wipe-down</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Hydrophobic spray sealant applied</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Premium air freshener applied</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Priority scheduling — locked bi-weekly slot</li>
+      </ul>
+      <a href="{{ '/booking/' | relative_url }}" class="plan-btn plan-btn-gold">Get Started</a>
+    </div>
+
+    <div class="plan-card" id="plan-monthly">
+      <div class="plan-freq">Monthly</div>
+      <div class="plan-name">Monthly Detail</div>
+      <p class="plan-desc">A comprehensive monthly detail that goes deeper — perfect for vehicles that need a full reset each month, inside and out.</p>
+      <div class="plan-price">
+        <div class="plan-price-num" id="price-monthly">$130</div>
+        <div class="plan-price-unit">/ visit</div>
+      </div>
+      <div class="plan-savings" id="savings-monthly">Save ~10% vs. standard rate</div>
+      <hr class="plan-divider">
+      <div class="plan-includes-label">Every Visit Includes</div>
+      <ul class="plan-includes">
+        <li><div class="check-circle"><div class="check-mark"></div></div>Full exterior hand wash and decontamination</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Wheel barrel and brake dust removal</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Door jambs, glass, and trim dressed</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Full interior vacuum and steam clean</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Leather conditioning (if applicable)</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Clay bar decontamination (quarterly)</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Ceramic sealant refreshed monthly</li>
+        <li><div class="check-circle"><div class="check-mark"></div></div>Priority scheduling — locked monthly slot</li>
+      </ul>
+      <a href="{{ '/booking/' | relative_url }}" class="plan-btn plan-btn-outline">Get Started</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="how-section">
+  <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">How It Works</span></div>
+  <h2 class="section-title">Simple to Start.<br>Easy to Keep.</h2>
+  <div class="how-grid">
+    <div class="how-step"><div class="how-n">01</div><div class="how-title">Choose Your Plan</div><p class="how-desc">Pick the frequency that fits your lifestyle. You can always upgrade, downgrade, or pause — no long-term contracts.</p></div>
+    <div class="how-step"><div class="how-n">02</div><div class="how-title">Book Your First Visit</div><p class="how-desc">Schedule your first appointment online. We'll confirm your recurring slot at the same time so you never have to think about it again.</p></div>
+    <div class="how-step"><div class="how-n">03</div><div class="how-title">We Come to You</div><p class="how-desc">Every visit, we show up at your location with everything we need — no drop-off required. You just go about your day.</p></div>
+    <div class="how-step"><div class="how-n">04</div><div class="how-title">Stay Consistent</div><p class="how-desc">A vehicle that's regularly maintained is easier and cheaper to care for. Consistent attention means fewer deep-clean sessions and a finish that lasts.</p></div>
+  </div>
+</div>
+
+<div class="faq-section">
+  <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Common Questions</span></div>
+  <h2 class="section-title">Straight Answers.</h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">Is there a contract or commitment?</div>
+      <p class="faq-a">No contracts, no lock-in. You can pause, change your plan, or cancel anytime with 48 hours notice before your next scheduled visit.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I need to reschedule a visit?</div>
+      <p class="faq-a">Just reach out at least 24 hours in advance and we'll move your appointment to a time that works. Subscription clients get scheduling priority.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I add services to a subscription visit?</div>
+      <p class="faq-a">Absolutely. You can add on any à la carte service at a discounted rate for subscribers. Just let us know when you book or when we arrive.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do prices change based on vehicle size?</div>
+      <p class="faq-a">Yes — use the vehicle size toggle at the top of this page to see pricing for your specific vehicle type. Trucks and large SUVs are priced slightly higher.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I pay?</div>
+      <p class="faq-a">We accept all major credit cards and payment apps. You'll be billed per visit after each appointment is completed — no prepayment required.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I have multiple vehicles on one plan?</div>
+      <p class="faq-a">Yes — multi-vehicle households get a discount on each additional vehicle added to a plan. Reach out to us directly to set that up.</p>
+    </div>
+  </div>
+</div>
+
+<div class="commercial-band">
+  <div class="commercial-text">
+    <div class="commercial-eyebrow">For Businesses</div>
+    <div class="commercial-title">Managing a Fleet?<br>We Have a Plan for That.</div>
+    <p class="commercial-desc">Reflekt Auto Care offers dedicated commercial account packages for businesses with multiple vehicles — dealerships, fleets, rental companies, and more. Custom pricing, priority scheduling, and account management included.</p>
+  </div>
+  <a href="{{ '/commercial/' | relative_url }}" class="btn-gold-outline">View Commercial Plans &rarr;</a>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to make clean your default?</h2>
+  <a href="{{ '/booking/' | relative_url }}" class="btn-black">Start Your Plan Today</a>
+</div>
+
+<script>
+  const pricing = {
+    weekly:   ['$65',  '$80',  '$95'],
+    biweekly: ['$90',  '$110', '$130'],
+    monthly:  ['$130', '$160', '$195']
+  };
+  const savings = {
+    weekly:   ['Save ~15% vs. standard rate', 'Save ~15% vs. standard rate', 'Save ~15% vs. standard rate'],
+    biweekly: ['Save ~10% vs. standard rate', 'Save ~10% vs. standard rate', 'Save ~10% vs. standard rate'],
+    monthly:  ['Save ~10% vs. standard rate', 'Save ~10% vs. standard rate', 'Save ~10% vs. standard rate']
+  };
+  function setVehicle(idx) {
+    document.querySelectorAll('.vehicle-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    ['weekly','biweekly','monthly'].forEach(plan => {
+      document.getElementById('price-' + plan).textContent = pricing[plan][idx];
+      document.getElementById('savings-' + plan).textContent = savings[plan][idx];
+    });
+  }
+</script>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA</title>
+<meta name="description" content="Book your mobile detailing appointment with Reflekt Auto Care online. Choose your service, pick a time, and we come to you anywhere in North Atlanta, GA.">
+<meta name="keywords" content="book mobile detailing Atlanta, schedule car detail North Atlanta, online auto detailing booking Georgia">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.reflektautocare.com/booking">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.reflektautocare.com/booking">
+<meta property="og:title" content="Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA">
+<meta property="og:description" content="Schedule your professional mobile detailing appointment online. Reflekt Auto Care comes to you across North Atlanta, GA.">
+<meta property="og:image" content="http://localhost:4000/hero-bg.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA">
+<meta name="twitter:description" content="Schedule your professional mobile detailing appointment online. Reflekt Auto Care comes to you across North Atlanta, GA.">
+<meta name="twitter:image" content="http://localhost:4000/hero-bg.jpg">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+
+<nav>
+  <a href="/" class="logo">REFL<span>E</span>KT</a>
+
+  
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/subscriptions/">Plans</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="mailto:reflektautocare.atl@gmail.com">Contact</a></li>
+    </ul>
+    <a href="/booking/" class="nav-cta active">Book Now</a>
+  
+</nav>
+
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">North Atlanta, GA — Schedule Your Visit</span></div>
+    <h1>Book Your Detail</h1>
+    <p>Select a date and time that works for you. We'll confirm your appointment and reach out with any questions before your visit.</p>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-item"><div class="trust-dot"></div><span>Book &amp; Pay in One Step</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Instant Confirmation</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Free Cancellation</span></div>
+  <div class="trust-item"><div class="trust-dot"></div><span>Secured by Square</span></div>
+</div>
+
+<div class="booking-section">
+  <div class="booking-layout">
+
+    <!-- Square Appointments embed
+         Replace YOUR_SQUARE_APPOINTMENTS_URL with your actual Square booking URL:
+         Square Dashboard → Appointments → Booking Sites
+         URL format: https://square.site/book/XXXXXXX/reflekt-auto-care -->
+    <div class="square-wrap" id="square-booking-wrap">
+      <iframe
+        id="square-booking-frame"
+        src="YOUR_SQUARE_APPOINTMENTS_URL"
+        title="Book an appointment with Reflekt Auto Care"
+        allow="payment"
+        loading="lazy">
+      </iframe>
+      <div class="square-wrap-fallback" id="square-fallback">
+        <p>Click below to open the booking page and pay your deposit — all in one step through Square.</p>
+        <a href="YOUR_SQUARE_APPOINTMENTS_URL" class="sq-book-btn" target="_blank" rel="noopener">
+          Book &amp; Pay Now &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <div class="info-eyebrow"><div class="info-eyebrow-line"></div><span class="info-eyebrow-text">How It Works</span></div>
+      <h2 class="info-title">Simple.<br>Fast.<br>Confirmed.</h2>
+      <p class="info-desc">Choose your service, pick a time, and pay your deposit — all in one seamless step through Square. No redirects, no extra forms.</p>
+      <div class="steps-mini">
+        <div class="step-mini">
+          <div class="step-mini-n">01</div>
+          <div class="step-mini-body"><h4>Choose a Service</h4><p>Select the detail package that fits your vehicle and needs.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">02</div>
+          <div class="step-mini-body"><h4>Pick Your Time</h4><p>Choose any open slot in the calendar that works for your schedule.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">03</div>
+          <div class="step-mini-body"><h4>Pay &amp; Confirm</h4><p>A small deposit is collected securely through Square to lock in your appointment.</p></div>
+        </div>
+        <div class="step-mini">
+          <div class="step-mini-n">04</div>
+          <div class="step-mini-body"><h4>We Come to You</h4><p>Our technician arrives at your location in North Atlanta. You sit back and enjoy.</p></div>
+        </div>
+      </div>
+      <div class="info-note">
+        <p><strong>Questions before booking?</strong> Email or call us directly and we'll help you choose the right service for your vehicle and budget.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Have a question about a service first?</h2>
+  <a href="/services/" class="btn-black">View Services &rarr;</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const frame = document.getElementById('square-booking-frame');
+    const fallback = document.getElementById('square-fallback');
+    if (!frame) return;
+    const src = frame.getAttribute('src') || '';
+    if (src.includes('YOUR_SQUARE_APPOINTMENTS_URL') || src === '' || src === '#') {
+      frame.style.display = 'none';
+      if (fallback) {
+        fallback.style.display = 'block';
+        const fallbackLink = fallback.querySelector('a');
+        if (fallbackLink) fallbackLink.href = '#';
+      }
+    } else {
+      if (fallback) fallback.style.display = 'none';
+      frame.style.display = 'block';
+    }
+  });
+</script>
+
+
+<footer>
+  <div class="footer-logo">REFL<span>E</span>KT</div>
+  <p>&copy; 2026 Reflekt Auto Care &mdash; North Atlanta, GA</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/reflektautocare" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.facebook.com/reflektautocare" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@reflektautocare" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08z"/></svg>
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="/services/">Services</a>
+    <a href="/subscriptions/">Plans</a>
+    <a href="#">Privacy</a>
+    <a href="mailto:reflektautocare.atl@gmail.com">Contact</a>
+  </div>
+</footer>
+
+
+
+<script src="/assets/js/reflekt-chatbot.js"></script>
+
+
+</body>
+</html>

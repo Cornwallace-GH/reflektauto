@@ -1,0 +1,41 @@
+title: Reflekt Auto Care
+description: >
+  Professional mobile auto detailing serving North Atlanta, GA.
+  Interior, exterior, paint correction, and ceramic coating.
+url: "https://www.reflektautocare.com"
+baseurl: ""
+email: reflektautocare.atl@gmail.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from Jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - SITE-AUDIT-QUESTIONS.md
+  - chatbot-server.js
+  - package.json
+  - reflekt-homepage.html
+  - reflekt-services.html
+  - reflekt-subscriptions.html
+  - reflekt-commercial.html
+  - reflekt-login.html
+
+# Default front matter for all pages
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      chatbot: true

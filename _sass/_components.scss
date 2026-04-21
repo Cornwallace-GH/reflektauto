@@ -1,0 +1,241 @@
+// ── Eyebrow ──
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.eyebrow-line { width: 32px; height: 1px; background: var(--gold); }
+.eyebrow-text {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+// ── Buttons ──
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  &:hover { background: var(--gold-light); }
+}
+
+.btn-black {
+  background: var(--black);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+  display: inline-block;
+  &:hover { background: #222; }
+}
+
+.btn-gold-outline {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  transition: all 0.2s;
+  &:hover { background: var(--gold); color: var(--black); }
+}
+
+.btn-outline-light {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 2px;
+}
+
+// ── CTA Band ──
+.cta-band {
+  background: var(--gold);
+  padding: 64px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(30px, 4vw, 48px);
+    letter-spacing: 1.5px;
+    color: var(--black);
+    max-width: 580px;
+    line-height: 1.1;
+  }
+}
+
+// ── Trust Bar ──
+.trust {
+  background: var(--black-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 5%;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 32px 6px 0;
+  margin-right: 32px;
+  border-right: 1px solid var(--border);
+  &:last-child { border-right: none; }
+  span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(245,244,240,0.6);
+    font-weight: 500;
+  }
+}
+.trust-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+// ── Page Header (inner pages) ──
+.page-header {
+  background: var(--black);
+  padding: 64px 5% 56px;
+}
+.page-header-inner { max-width: 640px; }
+.page-header {
+  .eyebrow { margin-bottom: 14px; }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 72px);
+    letter-spacing: 2px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 520px;
+  }
+}
+
+// ── Section Headings ──
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 4.5vw, 52px);
+  letter-spacing: 1.5px;
+  color: var(--ink);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-size: 15px;
+  color: #5a5a5a;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+  font-weight: 300;
+}
+
+// ── Check Circle ──
+.check-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.check-mark {
+  width: 8px;
+  height: 5px;
+  border-left: 1.5px solid var(--gold);
+  border-bottom: 1.5px solid var(--gold);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+// ── Form base styles ──
+.fg {
+  margin-bottom: 14px;
+  label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--black-3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+    &:focus { border-color: var(--gold); }
+    &::placeholder { color: rgba(245,244,240,0.25); }
+  }
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23C9A84C' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-color: var(--black-3);
+    option { background: var(--black-3); color: var(--white); }
+  }
+}
+
+.fg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
