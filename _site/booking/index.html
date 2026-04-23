@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA</title>
-<meta name="description" content="Book your mobile detailing appointment with Reflekt Auto Care online. Choose your service, pick a time, and we come to you anywhere in North Atlanta, GA.">
+<title>Booking — Rover Detail | Mobile Detailing North Atlanta</title>
+<meta name="description" content="Book your mobile detailing appointment with Rover Detail online. Choose your service, pick a time, and we come to you anywhere in North Atlanta, GA.">
 <meta name="keywords" content="book mobile detailing Atlanta, schedule car detail North Atlanta, online auto detailing booking Georgia">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://roverdetail.com/booking">
@@ -12,14 +12,14 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://roverdetail.com/booking">
-<meta property="og:title" content="Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA">
-<meta property="og:description" content="Schedule your professional mobile detailing appointment online. Reflekt Auto Care comes to you across North Atlanta, GA.">
+<meta property="og:title" content="Booking — Rover Detail | Mobile Detailing North Atlanta">
+<meta property="og:description" content="Schedule your professional mobile detailing appointment online. Rover Detail comes to you across North Atlanta, GA.">
 <meta property="og:image" content="http://localhost:4000/hero-bg.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Book a Detail — Reflekt Auto Care | Mobile Detailing North Atlanta, GA">
-<meta name="twitter:description" content="Schedule your professional mobile detailing appointment online. Reflekt Auto Care comes to you across North Atlanta, GA.">
+<meta name="twitter:title" content="Booking — Rover Detail | Mobile Detailing North Atlanta">
+<meta name="twitter:description" content="Schedule your professional mobile detailing appointment online. Rover Detail comes to you across North Atlanta, GA.">
 <meta name="twitter:image" content="http://localhost:4000/hero-bg.jpg">
 
 
@@ -32,7 +32,7 @@
 
 
 <nav>
-  <a href="/" class="logo">FRO<span>MAN</span></a>
+  <a href="/" class="logo">ROVER <span>DETAIL</span></a>
 
   
     <ul class="nav-links">
@@ -51,36 +51,39 @@
   
 </nav>
 
-<!-- Mobile dropdown menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <ul class="mobile-menu-links">
-    <li><a href="/" onclick="closeMobileMenu()">Home</a></li>
-    <li><a href="/services/" onclick="closeMobileMenu()">Services</a></li>
-    <li><a href="/subscriptions/" onclick="closeMobileMenu()">Plans</a></li>
-    <li><a href="#reviews" onclick="closeMobileMenu()">Reviews</a></li>
-    <li><a href="/contact/" onclick="closeMobileMenu()">Contact</a></li>
-  </ul>
-  <a href="/booking/" class="mobile-menu-cta" onclick="closeMobileMenu()">Book Now</a>
+<!-- Full-page mobile menu -->
+<div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-overlay-head">
+    <a href="/" class="logo" onclick="closeMobileMenu()">ROVER <span>DETAIL</span></a>
+    <button class="mobile-overlay-close" onclick="closeMobileMenu()" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-overlay-links">
+    <a href="/" onclick="closeMobileMenu()">Home</a>
+    <a href="/services/" onclick="closeMobileMenu()">Services</a>
+    <a href="/subscriptions/" onclick="closeMobileMenu()">Plans</a>
+    <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+    <a href="/contact/" onclick="closeMobileMenu()">Contact</a>
+  </nav>
+  <a href="/booking/" class="mobile-overlay-cta" onclick="closeMobileMenu()">Book Now</a>
 </div>
 
 <script>
   function toggleMobileMenu() {
-    var menu   = document.getElementById('mobile-menu');
-    var burger = document.getElementById('nav-hamburger');
-    var open   = menu.classList.toggle('open');
+    var overlay = document.getElementById('mobile-overlay');
+    var burger  = document.getElementById('nav-hamburger');
+    var open    = overlay.classList.toggle('open');
     burger.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   }
   function closeMobileMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('mobile-overlay').classList.remove('open');
     document.getElementById('nav-hamburger').classList.remove('open');
+    document.body.style.overflow = '';
   }
-  // Close on outside tap
-  document.addEventListener('click', function(e) {
-    var menu   = document.getElementById('mobile-menu');
-    var burger = document.getElementById('nav-hamburger');
-    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
-      closeMobileMenu();
-    }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMobileMenu();
   });
 </script>
 
@@ -148,8 +151,8 @@
 
 
 <footer>
-  <div class="footer-logo">REFL<span>E</span>KT</div>
-  <p>&copy; 2026 Reflekt Auto Care &mdash; North Atlanta, GA</p>
+  <div class="footer-logo">ROVER <span>DETAIL</span></div>
+  <p class="footer-tagline">North Atlanta, GA — Mobile Auto Detailing</p>
   <div class="footer-social">
     <a href="https://www.instagram.com/reflektautocare" target="_blank" rel="noopener" aria-label="Instagram">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
@@ -164,9 +167,10 @@
   <div class="footer-links">
     <a href="/services/">Services</a>
     <a href="/subscriptions/">Plans</a>
-    <a href="#">Privacy</a>
-    <a href="mailto:reflektautocare.atl@gmail.com">Contact</a>
+    <a href="/contact/">Contact</a>
+    <a href="/booking/">Book Now</a>
   </div>
+  <p class="footer-copy">&copy; 2026 Rover Detail &mdash; All rights reserved.</p>
 </footer>
 
 
