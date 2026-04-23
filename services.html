@@ -1,469 +1,394 @@
 ---
 layout: default
 title: "Services — Reflekt Auto Care | Mobile Detailing North Atlanta, GA"
-description: "Explore Reflekt Auto Care's full menu of mobile detailing services — interior detailing, exterior detailing, paint correction, ceramic coating, and full detail packages. Serving North Atlanta, GA."
-keywords: "mobile detailing services Atlanta, interior detailing Atlanta, exterior detailing Atlanta, paint correction North Atlanta, ceramic coating North Atlanta, car detail packages Georgia"
-canonical: "https://www.reflektautocare.com/services"
-og_description: "Browse all Reflekt Auto Care services — interior, exterior, paint correction, and ceramic coating. Professional mobile detailing delivered to your door."
+description: "Hand-performed mobile detailing services in North Atlanta, GA. Interior, exterior, paint correction, ceramic coating, and full detail — tiered pricing by vehicle size."
+keywords: "mobile detailing services Atlanta, car detailing prices North Atlanta, paint correction, ceramic coating, interior detail, exterior detail Georgia"
+canonical: "https://www.reflektautocare.com/services/"
+og_description: "Five core detailing services with tiered pricing by vehicle size. Interior, exterior, full detail, paint correction, and ceramic coating — we come to you."
+structured_data: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reflekt Auto Care — Services",
+    "provider": { "@type": "LocalBusiness", "name": "Reflekt Auto Care" },
+    "areaServed": { "@type": "State", "name": "North Atlanta, Georgia" },
+    "serviceType": ["Interior Detailing", "Exterior Detailing", "Full Detail", "Paint Correction", "Ceramic Coating"]
+  }
 ---
 
-<div class="page-header">
-  <div class="page-header-inner">
-    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">What We Offer</span></div>
-    <h1>Our Services</h1>
-    <p>Every service is performed by hand using professional-grade products. Select a service below to explore what's included and view pricing by vehicle size.</p>
+<!-- ───── HERO ───── -->
+<section class="svc-hero">
+  <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Our Services</span></div>
+  <h1><span>Expert Detail Work.</span><span>Priced Your Way.</span></h1>
+  <p class="hero-sub">Every service is performed by hand with professional-grade products. Choose the service, pick your tier, and we come to you — at home, at the office, wherever your vehicle lives.</p>
+
+  <div class="vehicle-select">
+    <span class="vehicle-label">Vehicle Size:</span>
+    <button class="vehicle-btn active" data-size="0" onclick="setSize(0)">Sedan / Coupe</button>
+    <button class="vehicle-btn" data-size="1" onclick="setSize(1)">SUV / Crossover</button>
+    <button class="vehicle-btn" data-size="2" onclick="setSize(2)">Truck / Large SUV</button>
   </div>
-</div>
+</section>
 
-<div class="cat-bar">
-  <span class="cat-label">Service Type:</span>
-  <div class="cat-btns">
-    <button class="cat-btn active" data-cat="all">All Services</button>
-    <button class="cat-btn" data-cat="interior">Interior</button>
-    <button class="cat-btn" data-cat="exterior">Exterior</button>
-    <button class="cat-btn" data-cat="paint">Paint &amp; Coat</button>
-    <button class="cat-btn" data-cat="full">Full Detail</button>
-  </div>
-</div>
-
-<div class="size-bar">
-  <span class="size-label">Vehicle Size:</span>
-  <div class="size-btns">
-    <button class="size-btn active" data-size="0">Sedan / Coupe</button>
-    <button class="size-btn" data-size="1">SUV / Crossover</button>
-    <button class="size-btn" data-size="2">Truck / Large SUV</button>
-  </div>
-</div>
-
-<div class="services-container">
-
-  <!-- 01 — INTERIOR DETAIL -->
-  <div class="service-block" data-index="0" data-category="interior">
-    <div class="service-header" onclick="toggle(0)">
-      <div class="svc-title-wrap">
-        <div class="svc-title">Interior Detail</div>
-        <div class="svc-tag">Interior</div>
-      </div>
-      <div style="display:flex;align-items:center">
-        <div class="svc-price-preview">
-          <div class="price-from">Starting at</div>
-          <div class="price-num" id="preview-0">— <span>select a tier</span></div>
-        </div>
-        <div class="toggle-icon">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-    </div>
-    <div class="service-body">
-      <div class="tier-bar">
-        <button class="tier-btn silver" data-tier="silver" onclick="setTier(0,'silver')">Silver</button>
-        <button class="tier-btn gold"   data-tier="gold"   onclick="setTier(0,'gold')">Gold</button>
-        <button class="tier-btn platinum" data-tier="platinum" onclick="setTier(0,'platinum')">Platinum</button>
-      </div>
-      <div class="tier-content-area" id="tier-content-0">
-        <div class="service-body-grid">
-          <div>
-            <div class="tier-panel" data-tier-panel="0-silver">
-              <div class="tier-badge silver"><div class="tier-badge-dot"></div>Silver</div>
-              <p class="svc-desc">A clean and polished refresh for well-maintained vehicles. All the essentials — done right and done thoroughly.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full vacuum — seats, carpets, floor mats, and crevices</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Dashboard, console, and door panels wiped down</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Vents and tight spaces cleaned</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Interior glass cleaned streak-free</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Air freshener applied</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="0-gold">
-              <div class="tier-badge gold"><div class="tier-badge-dot"></div>Gold</div>
-              <p class="svc-desc">A thorough top-to-bottom interior restoration. Dirt, stains, and odors removed from every surface — leaving your cabin looking and smelling like new.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Silver, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Steam cleaning of carpets, mats, and upholstery</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Stain treatment and extraction</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Leather cleaned and conditioned (if applicable)</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Plastic trim and door pockets detailed</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Long-lasting premium air freshener applied</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="0-platinum">
-              <div class="tier-badge platinum"><div class="tier-badge-dot"></div>Platinum</div>
-              <p class="svc-desc">The most comprehensive interior detail we offer. Every surface, every fabric, every inch — treated with professional-grade equipment and premium products.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Gold, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full hot water extraction of carpets and seats</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Deep stain removal and odor elimination treatment</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Plastic trim restoration with UV protectant</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full headliner wipe-down</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Ceramic-infused interior protectant applied</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Ozone odor treatment (if needed)</li>
-              </ul>
-            </div>
-          </div>
-          <div class="pricing-panel">
-            <div class="pricing-title">Pricing by vehicle size</div>
-            <div class="price-row">
-              <div><div class="price-size">Sedan / Coupe</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$80","gold":"$120","platinum":"$175"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">SUV / Crossover</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$100","gold":"$150","platinum":"$210"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">Truck / Large SUV</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$120","gold":"$175","platinum":"$250"}'>—</div>
-            </div>
-            <a href="{{ '/booking/' | relative_url }}" class="book-btn" id="book-btn-0">Book This Service</a>
-            <p class="note">Final price confirmed at booking based on condition</p>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- ───── SERVICES GRID ───── -->
+<section class="services-section">
+  <div class="section-head">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Choose Your Service</span></div>
+    <h2><span>Every Detail Considered.</span><span>Every Finish Protected.</span></h2>
+    <p>Five core services, with tiered options to match your vehicle's condition and your goals. Pricing adjusts with vehicle size — pick a tier inside each card to see what's included.</p>
   </div>
 
-  <!-- 02 — EXTERIOR DETAIL -->
-  <div class="service-block" data-index="1" data-category="exterior">
-    <div class="service-header" onclick="toggle(1)">
-      <div class="svc-title-wrap">
-        <div class="svc-title">Exterior Detail</div>
-        <div class="svc-tag">Exterior</div>
+  <div class="service-grid">
+
+    <!-- INTERIOR DETAIL -->
+    <div class="svc-card" data-service="interior">
+      <div class="svc-tag">Interior</div>
+      <h3 class="svc-title">Interior Detail</h3>
+      <p class="svc-desc">A deep clean of every cabin surface — from vacuumed carpets and wiped panels to steam-cleaned upholstery and odor elimination.</p>
+
+      <div class="tier-row">
+        <button class="tier-btn active" data-tier="silver" onclick="setTier('interior','silver')">Silver</button>
+        <button class="tier-btn" data-tier="gold" onclick="setTier('interior','gold')">Gold</button>
+        <button class="tier-btn" data-tier="platinum" onclick="setTier('interior','platinum')">Platinum</button>
       </div>
-      <div style="display:flex;align-items:center">
-        <div class="svc-price-preview">
-          <div class="price-from">Starting at</div>
-          <div class="price-num" id="preview-1">— <span>select a tier</span></div>
-        </div>
-        <div class="toggle-icon">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
+
+      <div class="price-line">
+        <span class="price-amt" data-price="interior">$80</span>
+        <span class="price-unit">starting</span>
       </div>
+      <div class="price-note" data-note="interior">Silver &middot; sedan / coupe</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list" data-includes="interior">
+        <li>Full vacuum — seats, carpets, floor mats, crevices</li>
+        <li>Dashboard, console, and door panels wiped down</li>
+        <li>Vents and tight spaces cleaned</li>
+        <li>Interior glass cleaned streak-free</li>
+        <li>Air freshener applied</li>
+      </ul>
+
+      <a href="{{ '/booking/' | relative_url }}" class="svc-cta primary">Book This Service</a>
     </div>
-    <div class="service-body">
-      <div class="tier-bar">
-        <button class="tier-btn silver" data-tier="silver" onclick="setTier(1,'silver')">Silver</button>
-        <button class="tier-btn gold"   data-tier="gold"   onclick="setTier(1,'gold')">Gold</button>
-        <button class="tier-btn platinum" data-tier="platinum" onclick="setTier(1,'platinum')">Platinum</button>
+
+    <!-- EXTERIOR DETAIL -->
+    <div class="svc-card" data-service="exterior">
+      <div class="svc-tag">Exterior</div>
+      <h3 class="svc-title">Exterior Detail</h3>
+      <p class="svc-desc">A proper hand wash with attention a machine can't give — safe technique, clay bar decontamination, and a lasting hydrophobic finish.</p>
+
+      <div class="tier-row">
+        <button class="tier-btn active" data-tier="silver" onclick="setTier('exterior','silver')">Silver</button>
+        <button class="tier-btn" data-tier="gold" onclick="setTier('exterior','gold')">Gold</button>
+        <button class="tier-btn" data-tier="platinum" onclick="setTier('exterior','platinum')">Platinum</button>
       </div>
-      <div class="tier-content-area" id="tier-content-1">
-        <div class="service-body-grid">
-          <div>
-            <div class="tier-panel" data-tier-panel="1-silver">
-              <div class="tier-badge silver"><div class="tier-badge-dot"></div>Silver</div>
-              <p class="svc-desc">A proper hand wash with the attention a machine can't give — safe technique, clean water, and a lasting hydrophobic finish.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Safe pre-rinse and two-bucket hand wash</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Wheel face and tire cleaned</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Tire dressing applied</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Exterior glass cleaned streak-free</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Quick-detail spray for surface gloss</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="1-gold">
-              <div class="tier-badge gold"><div class="tier-badge-dot"></div>Gold</div>
-              <p class="svc-desc">More than a car wash. A full hand-performed process that removes contaminants, restores shine, and seals the paint with lasting hydrophobic protection.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Silver, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Clay bar decontamination</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Door jambs, gas cap, and wheel arches cleaned</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Wheel barrel and brake dust removal</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>CarPro Hydro2 sealant — shine and lasting protection</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="1-platinum">
-              <div class="tier-badge platinum"><div class="tier-badge-dot"></div>Platinum</div>
-              <p class="svc-desc">The premium exterior treatment — full decontamination, paint prep, and a professional-grade ceramic sealant for deep gloss and long-term protection.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Gold, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Iron decontamination spray (fallout remover)</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full engine bay wipe-down</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Paint surface prep and panel wipe</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Premium ceramic sealant — 6–12 month protection</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Trim and rubber seal dressing</li>
-              </ul>
-            </div>
-          </div>
-          <div class="pricing-panel">
-            <div class="pricing-title">Pricing by vehicle size</div>
-            <div class="price-row">
-              <div><div class="price-size">Sedan / Coupe</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$100","gold":"$130","platinum":"$185"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">SUV / Crossover</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$130","gold":"$160","platinum":"$220"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">Truck / Large SUV</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$155","gold":"$185","platinum":"$260"}'>—</div>
-            </div>
-            <a href="{{ '/booking/' | relative_url }}" class="book-btn" id="book-btn-1">Book This Service</a>
-            <p class="note">Final price confirmed at booking based on condition</p>
-          </div>
-        </div>
+
+      <div class="price-line">
+        <span class="price-amt" data-price="exterior">$100</span>
+        <span class="price-unit">starting</span>
       </div>
+      <div class="price-note" data-note="exterior">Silver &middot; sedan / coupe</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list" data-includes="exterior">
+        <li>Safe pre-rinse and two-bucket hand wash</li>
+        <li>Wheel face and tire cleaned</li>
+        <li>Tire dressing applied</li>
+        <li>Exterior glass cleaned streak-free</li>
+        <li>Quick-detail spray for surface gloss</li>
+      </ul>
+
+      <a href="{{ '/booking/' | relative_url }}" class="svc-cta primary">Book This Service</a>
+    </div>
+
+    <!-- FULL DETAIL (MOST POPULAR) -->
+    <div class="svc-card popular" data-service="full">
+      <span class="svc-badge">Most Popular</span>
+      <div class="svc-tag">Interior + Exterior</div>
+      <h3 class="svc-title">Full Detail</h3>
+      <p class="svc-desc">The complete reset — every surface inside, every panel outside. Best value vs. booking interior and exterior separately.</p>
+
+      <div class="tier-row">
+        <button class="tier-btn active" data-tier="silver" onclick="setTier('full','silver')">Silver</button>
+        <button class="tier-btn" data-tier="gold" onclick="setTier('full','gold')">Gold</button>
+        <button class="tier-btn" data-tier="platinum" onclick="setTier('full','platinum')">Platinum</button>
+      </div>
+
+      <div class="price-line">
+        <span class="price-amt" data-price="full">$160</span>
+        <span class="price-unit">starting</span>
+      </div>
+      <div class="price-note" data-note="full">Silver &middot; sedan / coupe &middot; saves vs. separate bookings</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list" data-includes="full">
+        <li>Full vacuum — seats, carpets, floor mats, crevices</li>
+        <li>Dashboard, console, door panels wiped down</li>
+        <li>Interior glass streak-free + air freshener</li>
+        <li>Safe pre-rinse and two-bucket hand wash</li>
+        <li>Wheel face and tire cleaned + tire dressing</li>
+        <li>Exterior glass streak-free + quick-detail gloss spray</li>
+      </ul>
+
+      <a href="{{ '/booking/' | relative_url }}" class="svc-cta primary">Book This Service</a>
+    </div>
+
+    <!-- PAINT CORRECTION (QUOTE) -->
+    <div class="svc-card" data-service="paint">
+      <div class="svc-tag">Paint &amp; Coat</div>
+      <h3 class="svc-title">Paint Correction</h3>
+      <p class="svc-desc">Machine polishing that physically removes swirl marks, light scratches, water spots, and oxidation — restoring a mirror-like finish.</p>
+
+      <div class="price-line">
+        <span class="quote-amt">Request a Quote</span>
+      </div>
+      <div class="price-note">Pricing varies by vehicle size, condition &amp; correction stages</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list">
+        <li>Full decontamination wash and clay bar treatment</li>
+        <li>Paint depth &amp; gloss measurement (before/after)</li>
+        <li>Single or multi-stage machine polishing</li>
+        <li>Removal of swirls, light scratches, oxidation</li>
+        <li>Finishing polish for maximum clarity</li>
+        <li>Paint sealant applied as final protection</li>
+      </ul>
+
+      <a href="mailto:reflektautocare.atl@gmail.com?subject=Paint%20Correction%20Quote%20Request" class="svc-cta outline">Request a Quote</a>
+    </div>
+
+    <!-- CERAMIC COATING (QUOTE) -->
+    <div class="svc-card" data-service="ceramic">
+      <div class="svc-tag">Paint &amp; Coat</div>
+      <h3 class="svc-title">Ceramic Coating</h3>
+      <p class="svc-desc">A nano-ceramic layer that bonds to your paint — years of protection against UV, contaminants, and water spots, with unmatched deep gloss.</p>
+
+      <div class="price-line">
+        <span class="quote-amt">Request a Quote</span>
+      </div>
+      <div class="price-note">Pricing varies by paint condition, vehicle size &amp; coating package</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list">
+        <li>Full decontamination wash and clay bar treatment</li>
+        <li>Paint correction to ensure a flawless base</li>
+        <li>IPA panel wipe to remove all polish residue</li>
+        <li>Professional-grade ceramic coating applied by hand</li>
+        <li>Curing time and final inspection under lighting</li>
+        <li>2–5 year protection warranty depending on package</li>
+      </ul>
+
+      <a href="mailto:reflektautocare.atl@gmail.com?subject=Ceramic%20Coating%20Quote%20Request" class="svc-cta outline">Request a Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ───── HOW IT WORKS ───── -->
+<section class="how-section">
+  <div class="section-head">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">How It Works</span></div>
+    <h2><span>Simple to Book.</span><span>Delivered to You.</span></h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-title">Pick Your Service</div>
+      <p class="step-desc">Select the service and tier that matches your vehicle's current condition and your goals.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-title">Book Online</div>
+      <p class="step-desc">Choose a time through our booking page. Confirmation and reminders are sent automatically.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-title">We Come to You</div>
+      <p class="step-desc">We show up fully equipped — no drop-off, no waiting room. Home, office, wherever the car is parked.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-title">Drive Away Clean</div>
+      <p class="step-desc">Inspect the finish with us before we leave. Satisfaction is the finish line — not the clock.</p>
     </div>
   </div>
+</section>
 
-  <!-- 03 — PAINT CORRECTION -->
-  <div class="service-block" data-index="2" data-category="paint">
-    <div class="service-header" onclick="toggle(2)">
-      <div class="svc-title-wrap">
-        <div class="svc-title">Paint Correction</div>
-        <div class="svc-tag">Paint &amp; Coat</div>
-      </div>
-      <div style="display:flex;align-items:center">
-        <a href="mailto:reflektautocare.atl@gmail.com?subject=Paint Correction Quote Request" class="header-quote-btn" onclick="event.stopPropagation()">Request a Quote</a>
-        <div class="toggle-icon">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
+<!-- ───── FAQ ───── -->
+<section class="faq-section">
+  <div class="section-head">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Common Questions</span></div>
+    <h2>Straight Answers.</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I know which tier to pick?</button>
+      <div class="faq-a"><p style="padding-top:4px">Silver is for well-maintained vehicles that need a polished refresh. Gold is a deeper restoration. Platinum is our most comprehensive — full decontamination, deep extraction, and premium protection. When in doubt, we'll assess on arrival and recommend.</p></div>
     </div>
-    <div class="service-body">
-      <div class="service-body-grid">
-        <div>
-          <p class="svc-desc">A professional machine polishing process that physically removes swirl marks, light scratches, water spots, and oxidation — restoring your paint to a true mirror-like finish. This is the recommended service before ceramic coating.</p>
-          <div class="svc-includes-title">What's Included</div>
-          <ul class="svc-includes">
-            <li><div class="check-circle"><div class="check-mark"></div></div>Full decontamination wash and clay bar treatment</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Paint depth and gloss measurement (before &amp; after)</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Single or multi-stage machine polishing</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Removal of swirl marks, light scratches, and oxidation</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Panel wipe-down and inspection under lighting</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Finishing polish for maximum gloss and clarity</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Paint sealant applied as final protection</li>
-          </ul>
-        </div>
-        <div class="quote-panel">
-          <div class="quote-panel-title">Pricing varies by vehicle</div>
-          <p class="quote-panel-note">Paint correction is assessed on a case-by-case basis. Pricing depends on your vehicle's paint condition, size, and the level of correction required — so we build every quote around your specific situation.</p>
-          <ul class="quote-factors">
-            <li><div class="quote-dot"></div>Vehicle size and panel count</li>
-            <li><div class="quote-dot"></div>Severity of swirls, scratches, and oxidation</li>
-            <li><div class="quote-dot"></div>Number of correction stages needed</li>
-            <li><div class="quote-dot"></div>Current paint condition and thickness</li>
-          </ul>
-          <a href="mailto:reflektautocare.atl@gmail.com?subject=Paint Correction Quote Request" class="quote-btn">Request a Quote</a>
-          <p class="quote-sub">We'll follow up within 24 hours to schedule your inspection</p>
-        </div>
-      </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do prices change based on vehicle size?</button>
+      <div class="faq-a"><p style="padding-top:4px">Yes — use the vehicle size toggle at the top of this page to see starting prices for your vehicle type. Trucks and large SUVs are priced slightly higher due to surface area.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Why do Paint Correction and Ceramic Coating require a quote?</button>
+      <div class="faq-a"><p style="padding-top:4px">Both services depend heavily on your paint's current condition — swirl severity, oxidation level, and correction stages needed. Rather than quote a misleading range, we assess your specific vehicle and build an accurate price. We follow up within 24 hours.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How long does a service take?</button>
+      <div class="faq-a"><p style="padding-top:4px">Silver services generally run 1.5–2.5 hours. Gold 2.5–4 hours. Platinum 4–6+ hours depending on vehicle size and condition. Paint correction and ceramic coating are typically full-day jobs.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What do you need on-site?</button>
+      <div class="faq-a"><p style="padding-top:4px">A power outlet and water access make things easiest, but we arrive self-sufficient when needed. Just a level spot to park with room to work around the vehicle.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do you offer recurring service discounts?</button>
+      <div class="faq-a"><p style="padding-top:4px">Yes — our <a href="{{ '/subscriptions/' | relative_url }}" style="color:var(--gold);text-decoration:underline">subscription plans</a> (Weekly / Bi-Weekly / Monthly) include priority scheduling and locked-in discounts off standard rates.</p></div>
     </div>
   </div>
+</section>
 
-  <!-- 04 — CERAMIC COATING -->
-  <div class="service-block" data-index="3" data-category="paint">
-    <div class="service-header" onclick="toggle(3)">
-      <div class="svc-title-wrap">
-        <div class="svc-title">Ceramic Coating</div>
-        <div class="svc-tag">Paint &amp; Coat</div>
-      </div>
-      <div style="display:flex;align-items:center">
-        <a href="mailto:reflektautocare.atl@gmail.com?subject=Ceramic Coating Quote Request" class="header-quote-btn" onclick="event.stopPropagation()">Request a Quote</a>
-        <div class="toggle-icon">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-    </div>
-    <div class="service-body">
-      <div class="service-body-grid">
-        <div>
-          <p class="svc-desc">The ultimate long-term investment in your vehicle's finish. A nano-ceramic layer bonds to your paint and provides years of protection against UV, contaminants, bird droppings, and water spots — while delivering an unmatched, deep gloss.</p>
-          <div class="svc-includes-title">What's Included</div>
-          <ul class="svc-includes">
-            <li><div class="check-circle"><div class="check-mark"></div></div>Full decontamination wash and clay bar treatment</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Paint correction to ensure a flawless base</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>IPA panel wipe to remove all polish residue</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Professional-grade ceramic coating applied by hand</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Curing time and final inspection under lighting</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>Aftercare guide and maintenance tips provided</li>
-            <li><div class="check-circle"><div class="check-mark"></div></div>2–5 year protection warranty depending on package</li>
-          </ul>
-        </div>
-        <div class="quote-panel">
-          <div class="quote-panel-title">Pricing varies by vehicle</div>
-          <p class="quote-panel-note">Ceramic coating pricing is built around your vehicle's needs — every job includes paint correction as a base, but the total cost depends on your paint's current condition, vehicle size, and the coating package you choose.</p>
-          <ul class="quote-factors">
-            <li><div class="quote-dot"></div>Vehicle size and panel layout</li>
-            <li><div class="quote-dot"></div>Current paint condition (determines correction level)</li>
-            <li><div class="quote-dot"></div>Coating package selected (1-year to 5-year protection)</li>
-            <li><div class="quote-dot"></div>Additional surfaces (glass, wheels, trim)</li>
-          </ul>
-          <a href="mailto:reflektautocare.atl@gmail.com?subject=Ceramic Coating Quote Request" class="quote-btn">Request a Quote</a>
-          <p class="quote-sub">We'll follow up within 24 hours to schedule your inspection</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 05 — FULL DETAIL -->
-  <div class="service-block" data-index="4" data-category="full">
-    <div class="service-header" onclick="toggle(4)">
-      <div class="svc-title-wrap">
-        <div class="svc-title">Full Detail</div>
-        <div class="svc-tag">Interior + Exterior</div>
-      </div>
-      <div style="display:flex;align-items:center">
-        <div class="svc-price-preview">
-          <div class="price-from">Starting at</div>
-          <div class="price-num" id="preview-4">— <span>select a tier</span></div>
-        </div>
-        <div class="toggle-icon">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-    </div>
-    <div class="service-body">
-      <div class="tier-bar">
-        <button class="tier-btn silver" data-tier="silver" onclick="setTier(4,'silver')">Silver</button>
-        <button class="tier-btn gold"   data-tier="gold"   onclick="setTier(4,'gold')">Gold</button>
-        <button class="tier-btn platinum" data-tier="platinum" onclick="setTier(4,'platinum')">Platinum</button>
-      </div>
-      <div class="tier-content-area" id="tier-content-4">
-        <div class="service-body-grid">
-          <div>
-            <div class="tier-panel" data-tier-panel="4-silver">
-              <div class="tier-badge silver"><div class="tier-badge-dot"></div>Silver</div>
-              <p class="svc-desc">A complete refresh inside and out — your cabin cleaned top-to-bottom while the exterior gets a thorough hand wash and protective finish, all in one appointment.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full vacuum — seats, carpets, floor mats, and crevices</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Dashboard, console, and door panels wiped down</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Interior glass cleaned streak-free + air freshener</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Safe pre-rinse and two-bucket hand wash</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Wheel face and tire cleaned + tire dressing applied</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Exterior glass streak-free + quick-detail gloss spray</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="4-gold">
-              <div class="tier-badge gold"><div class="tier-badge-dot"></div>Gold</div>
-              <p class="svc-desc">A full inside-and-out transformation. Deep steam cleaning removes every stain and odor from the interior while clay bar decontamination and a ceramic sealant protect the paint.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Silver, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Steam cleaning of carpets, mats, and upholstery</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Stain treatment, extraction, and leather conditioning</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Plastic trim and door pockets detailed</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Clay bar decontamination + door jambs and wheel arches</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Wheel barrel and brake dust removal</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>CarPro Hydro2 sealant — lasting hydrophobic protection</li>
-              </ul>
-            </div>
-            <div class="tier-panel" data-tier-panel="4-platinum">
-              <div class="tier-badge platinum"><div class="tier-badge-dot"></div>Platinum</div>
-              <p class="svc-desc">The complete Reflekt experience. Every inch of your vehicle — inside and out — treated with professional-grade equipment, premium products, and maximum protection.</p>
-              <div class="svc-includes-title">What's Included</div>
-              <ul class="svc-includes">
-                <li><div class="check-circle"><div class="check-mark"></div></div>Everything in Gold, plus:</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full hot water extraction of carpets and seats</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Deep stain removal, odor elimination + ozone treatment</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Ceramic-infused interior protectant + UV trim restoration</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Iron decontamination spray (fallout remover)</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Full engine bay wipe-down + trim and seal dressing</li>
-                <li><div class="check-circle"><div class="check-mark"></div></div>Premium ceramic sealant — 6–12 month exterior protection</li>
-              </ul>
-            </div>
-          </div>
-          <div class="pricing-panel">
-            <div class="pricing-title">Pricing by vehicle size</div>
-            <div class="price-row">
-              <div><div class="price-size">Sedan / Coupe</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$160","gold":"$225","platinum":"$320"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">SUV / Crossover</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$210","gold":"$285","platinum":"$400"}'>—</div>
-            </div>
-            <div class="price-row">
-              <div><div class="price-size">Truck / Large SUV</div></div>
-              <div class="price-amount" data-tier-prices='{"silver":"$250","gold":"$330","platinum":"$475"}'>—</div>
-            </div>
-            <a href="{{ '/booking/' | relative_url }}" class="book-btn" id="book-btn-4">Book This Service</a>
-            <p class="note">Best value — save vs. booking interior + exterior separately</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="cta-band">
-  <h2>Not sure which service is right for you?</h2>
-  <a href="mailto:{{ site.email }}" class="btn-black">Contact Us &rarr;</a>
-</div>
+<!-- ───── FINAL CTA ───── -->
+<section class="svc-cta-band">
+  <h2>Ready to see the difference?</h2>
+  <a href="{{ '/booking/' | relative_url }}">Book Your Detail</a>
+</section>
 
 <script>
-  const sizeShort = ['sedan', 'SUV', 'truck'];
-  const tierStartPrices = {
-    0: { silver: ['$80','$100','$120'],  gold: ['$120','$150','$175'], platinum: ['$175','$210','$250'] },
-    1: { silver: ['$100','$130','$155'], gold: ['$130','$160','$185'], platinum: ['$185','$220','$260'] },
-    4: { silver: ['$160','$210','$250'], gold: ['$225','$285','$330'], platinum: ['$320','$400','$475'] }
+  const PRICING = {
+    interior: {
+      silver:   ['$80',  '$100', '$120'],
+      gold:     ['$120', '$150', '$175'],
+      platinum: ['$175', '$210', '$250']
+    },
+    exterior: {
+      silver:   ['$100', '$130', '$155'],
+      gold:     ['$130', '$160', '$185'],
+      platinum: ['$185', '$220', '$260']
+    },
+    full: {
+      silver:   ['$160', '$210', '$250'],
+      gold:     ['$225', '$285', '$330'],
+      platinum: ['$320', '$400', '$475']
+    }
   };
 
+  const TIER_INCLUDES = {
+    interior: {
+      silver: [
+        'Full vacuum \u2014 seats, carpets, floor mats, crevices',
+        'Dashboard, console, and door panels wiped down',
+        'Vents and tight spaces cleaned',
+        'Interior glass cleaned streak-free',
+        'Air freshener applied'
+      ],
+      gold: [
+        'Everything in Silver, plus:',
+        'Steam cleaning of carpets, mats, and upholstery',
+        'Stain treatment and extraction',
+        'Leather cleaned and conditioned (if applicable)',
+        'Plastic trim and door pockets detailed',
+        'Long-lasting premium air freshener'
+      ],
+      platinum: [
+        'Everything in Gold, plus:',
+        'Full hot water extraction of carpets and seats',
+        'Deep stain removal and odor elimination',
+        'Plastic trim restoration with UV protectant',
+        'Full headliner wipe-down',
+        'Ceramic-infused interior protectant',
+        'Ozone odor treatment (if needed)'
+      ]
+    },
+    exterior: {
+      silver: [
+        'Safe pre-rinse and two-bucket hand wash',
+        'Wheel face and tire cleaned',
+        'Tire dressing applied',
+        'Exterior glass cleaned streak-free',
+        'Quick-detail spray for surface gloss'
+      ],
+      gold: [
+        'Everything in Silver, plus:',
+        'Clay bar decontamination',
+        'Door jambs, gas cap, wheel arches cleaned',
+        'Wheel barrel and brake dust removal',
+        'CarPro Hydro2 sealant \u2014 lasting hydrophobic protection'
+      ],
+      platinum: [
+        'Everything in Gold, plus:',
+        'Iron decontamination spray (fallout remover)',
+        'Full engine bay wipe-down',
+        'Paint surface prep and panel wipe',
+        'Premium ceramic sealant \u2014 6\u201312 month protection',
+        'Trim and rubber seal dressing'
+      ]
+    },
+    full: {
+      silver: [
+        'Full vacuum \u2014 seats, carpets, floor mats, crevices',
+        'Dashboard, console, door panels wiped down',
+        'Interior glass streak-free + air freshener',
+        'Safe pre-rinse and two-bucket hand wash',
+        'Wheel face and tire cleaned + tire dressing',
+        'Exterior glass streak-free + quick-detail gloss'
+      ],
+      gold: [
+        'Everything in Silver, plus:',
+        'Steam cleaning of carpets, mats, upholstery',
+        'Stain treatment + leather conditioning',
+        'Clay bar decontamination + door jambs',
+        'Wheel barrel and brake dust removal',
+        'CarPro Hydro2 sealant for lasting protection'
+      ],
+      platinum: [
+        'Everything in Gold, plus:',
+        'Full hot water extraction of carpets and seats',
+        'Deep odor elimination + ozone treatment',
+        'Ceramic-infused interior protectant + UV trim',
+        'Iron decontamination + engine bay wipe-down',
+        'Premium ceramic sealant \u2014 6\u201312 month exterior'
+      ]
+    }
+  };
+
+  const SIZE_LABEL = ['sedan / coupe', 'SUV / crossover', 'truck / large SUV'];
   let activeSize = 0;
-  let activeCategory = 'all';
-  const activeTiers = { 0: null, 1: null, 4: null };
+  const activeTier = { interior: 'silver', exterior: 'silver', full: 'silver' };
 
-  function toggle(idx) {
-    document.querySelectorAll('.service-block').forEach((b, i) => {
-      if (i === idx) b.classList.toggle('open');
-      else b.classList.remove('open');
-    });
+  function setSize(i) {
+    activeSize = i;
+    document.querySelectorAll('.vehicle-btn').forEach((b, idx) => b.classList.toggle('active', idx === i));
+    ['interior','exterior','full'].forEach(svc => refreshCard(svc));
   }
 
-  function setCategory(cat) {
-    activeCategory = cat;
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
-    document.querySelectorAll('.service-block').forEach(block => {
-      const visible = cat === 'all' || block.dataset.category === cat;
-      block.style.display = visible ? '' : 'none';
-      if (!visible) block.classList.remove('open');
-    });
+  function setTier(svc, tier) {
+    activeTier[svc] = tier;
+    const card = document.querySelector('.svc-card[data-service="' + svc + '"]');
+    if (!card) return;
+    card.querySelectorAll('.tier-btn').forEach(b => b.classList.toggle('active', b.dataset.tier === tier));
+    refreshCard(svc);
   }
 
-  function setTier(serviceIdx, tier) {
-    activeTiers[serviceIdx] = tier;
-    const block = document.querySelector('.service-block[data-index="' + serviceIdx + '"]');
-    if (!block) return;
-    block.querySelectorAll('.tier-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.tier === tier));
-    const contentArea = document.getElementById('tier-content-' + serviceIdx);
-    if (contentArea) contentArea.classList.add('visible');
-    block.querySelectorAll('[data-tier-panel]').forEach(panel => {
-      panel.classList.toggle('active', panel.dataset.tierPanel === serviceIdx + '-' + tier);
-    });
-    const amounts = [...block.querySelectorAll('.price-amount[data-tier-prices]')];
-    amounts.forEach((el, rowIdx) => {
-      const tp = JSON.parse(el.dataset.tierPrices);
-      el.textContent = tp[tier];
-      el.classList.toggle('gold', rowIdx === activeSize);
-    });
-    const preview = document.getElementById('preview-' + serviceIdx);
-    if (preview) preview.innerHTML = tierStartPrices[serviceIdx][tier][activeSize] + ' <span>/ ' + sizeShort[activeSize] + '</span>';
+  function refreshCard(svc) {
+    const card = document.querySelector('.svc-card[data-service="' + svc + '"]');
+    if (!card) return;
+    const tier = activeTier[svc];
+    const priceEl = card.querySelector('[data-price]');
+    const noteEl = card.querySelector('[data-note]');
+    const listEl = card.querySelector('[data-includes]');
+
+    if (priceEl) priceEl.textContent = PRICING[svc][tier][activeSize];
+    if (noteEl) {
+      const tierLabel = tier.charAt(0).toUpperCase() + tier.slice(1);
+      const extra = (svc === 'full') ? ' \u00b7 saves vs. separate bookings' : '';
+      noteEl.textContent = tierLabel + ' \u00b7 ' + SIZE_LABEL[activeSize] + extra;
+    }
+    if (listEl) {
+      listEl.innerHTML = TIER_INCLUDES[svc][tier].map(item => '<li>' + item + '</li>').join('');
+    }
   }
 
-  function setSize(idx) {
-    activeSize = idx;
-    document.querySelectorAll('.size-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-    [0, 1, 4].forEach(svcIdx => {
-      const tier = activeTiers[svcIdx];
-      if (!tier) return;
-      const block = document.querySelector('.service-block[data-index="' + svcIdx + '"]');
-      if (!block) return;
-      const amounts = [...block.querySelectorAll('.price-amount[data-tier-prices]')];
-      amounts.forEach((el, rowIdx) => el.classList.toggle('gold', rowIdx === idx));
-      const preview = document.getElementById('preview-' + svcIdx);
-      if (preview) preview.innerHTML = tierStartPrices[svcIdx][tier][idx] + ' <span>/ ' + sizeShort[idx] + '</span>';
-    });
+  function toggleFaq(btn) {
+    btn.parentElement.classList.toggle('open');
   }
-
-  document.querySelectorAll('.size-btn').forEach((btn, i) => btn.addEventListener('click', () => setSize(i)));
-  document.querySelectorAll('.cat-btn').forEach(btn => btn.addEventListener('click', () => setCategory(btn.dataset.cat)));
-  setSize(0);
-  setCategory('all');
 </script>
