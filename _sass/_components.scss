@@ -240,77 +240,26 @@
   gap: 14px;
 }
 
-// ── Prominent Vehicle Size Selector ──
-.size-selector {
-  margin: 40px auto 56px;
-  max-width: 760px;
-  text-align: center;
-}
-.size-selector-label {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-.size-selector-btns {
-  display: flex;
-  gap: 12px;
+// ── Vehicle selector — light-bg section variant ──
+// Used on services and plans pages where the selector sits inside a white section.
+// Inherits the original pill-button shape; overrides colours and scales up.
+.vehicle-select--section {
   justify-content: center;
-  flex-wrap: wrap;
-}
-.size-selector-btn {
-  flex: 1;
-  min-width: 160px;
-  max-width: 220px;
-  padding: 16px 20px;
-  background: transparent;
-  border: 1px solid var(--divider);
-  border-radius: 8px;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  transition: all .2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  &:hover {
-    border-color: var(--gold);
-    background: rgba(201,168,76,0.04);
-  }
-  &.active {
-    background: var(--black);
-    border-color: var(--black);
-    .size-selector-name { color: var(--white); }
-    .size-selector-sub  { color: var(--gold); }
-  }
-}
-.size-selector-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--black);
-  letter-spacing: 0.3px;
-}
-.size-selector-sub {
-  font-size: 11px;
-  color: var(--ink-3);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.size-selector-note {
-  margin-top: 14px;
-  font-size: 12px;
-  color: var(--ink-3);
-  letter-spacing: 0.3px;
-}
-
-// ── Commercial Band — dual buttons ──
-.commercial-btns {
-  display: flex;
-  flex-direction: column;
+  margin: 40px 0 52px;
   gap: 12px;
-  align-items: flex-start;
-  flex-shrink: 0;
-  @media (max-width: 680px) { align-items: stretch; }
+  .vehicle-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--ink-3);
+    margin-right: 4px;
+  }
+  .vehicle-btn {
+    color: var(--black);
+    border-color: var(--divider);
+    font-size: 13px;
+    padding: 11px 28px;
+    border-radius: 6px;
+    &:hover { border-color: var(--gold); color: var(--gold); background: transparent; }
+    &.active { background: var(--black); border-color: var(--black); color: var(--white); }
+  }
 }

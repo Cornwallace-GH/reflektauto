@@ -22,23 +22,11 @@ og_description: "Keep your vehicle looking its best year-round with Reflekt Auto
     <p class="section-sub">Every plan includes a dedicated appointment slot, priority scheduling, and a discount off standard rates — the more frequently we come, the more you save.</p>
   </div>
 
-  <div class="size-selector">
-    <div class="size-selector-label">Select Your Vehicle Size</div>
-    <div class="size-selector-btns">
-      <button class="size-selector-btn active" onclick="setVehicle(0)">
-        <span class="size-selector-name">Sedan / Coupe</span>
-        <span class="size-selector-sub">Standard size</span>
-      </button>
-      <button class="size-selector-btn" onclick="setVehicle(1)">
-        <span class="size-selector-name">SUV / Crossover</span>
-        <span class="size-selector-sub">Mid-size</span>
-      </button>
-      <button class="size-selector-btn" onclick="setVehicle(2)">
-        <span class="size-selector-name">Truck / Large SUV</span>
-        <span class="size-selector-sub">Full size</span>
-      </button>
-    </div>
-    <p class="size-selector-note">Plan pricing below updates automatically based on your selection.</p>
+  <div class="vehicle-select vehicle-select--section">
+    <span class="vehicle-label">Vehicle Size:</span>
+    <button class="vehicle-btn active" onclick="setVehicle(0)">Sedan / Coupe</button>
+    <button class="vehicle-btn" onclick="setVehicle(1)">SUV / Crossover</button>
+    <button class="vehicle-btn" onclick="setVehicle(2)">Truck / Large SUV</button>
   </div>
 
   <div class="plans-grid">
@@ -184,7 +172,7 @@ og_description: "Keep your vehicle looking its best year-round with Reflekt Auto
     monthly:  ['Save ~10% vs. standard rate', 'Save ~10% vs. standard rate', 'Save ~10% vs. standard rate']
   };
   function setVehicle(idx) {
-    document.querySelectorAll('.size-selector-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    document.querySelectorAll('.vehicle-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
     ['weekly','biweekly','monthly'].forEach(plan => {
       document.getElementById('price-' + plan).textContent = pricing[plan][idx];
       document.getElementById('savings-' + plan).textContent = savings[plan][idx];

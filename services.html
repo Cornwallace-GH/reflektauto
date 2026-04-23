@@ -31,23 +31,11 @@ structured_data: >
     <p>Five core services, with tiered options to match your vehicle's condition and your goals. Pricing adjusts with vehicle size — pick a tier inside each card to see what's included.</p>
   </div>
 
-  <div class="size-selector">
-    <div class="size-selector-label">Select Your Vehicle Size</div>
-    <div class="size-selector-btns">
-      <button class="size-selector-btn active" data-size="0" onclick="setSize(0)">
-        <span class="size-selector-name">Sedan / Coupe</span>
-        <span class="size-selector-sub">Standard size</span>
-      </button>
-      <button class="size-selector-btn" data-size="1" onclick="setSize(1)">
-        <span class="size-selector-name">SUV / Crossover</span>
-        <span class="size-selector-sub">Mid-size</span>
-      </button>
-      <button class="size-selector-btn" data-size="2" onclick="setSize(2)">
-        <span class="size-selector-name">Truck / Large SUV</span>
-        <span class="size-selector-sub">Full size</span>
-      </button>
-    </div>
-    <p class="size-selector-note">Pricing shown below updates automatically based on your selection.</p>
+  <div class="vehicle-select vehicle-select--section">
+    <span class="vehicle-label">Vehicle Size:</span>
+    <button class="vehicle-btn active" data-size="0" onclick="setSize(0)">Sedan / Coupe</button>
+    <button class="vehicle-btn" data-size="1" onclick="setSize(1)">SUV / Crossover</button>
+    <button class="vehicle-btn" data-size="2" onclick="setSize(2)">Truck / Large SUV</button>
   </div>
 
   <div class="service-grid">
@@ -232,10 +220,7 @@ structured_data: >
     <div class="commercial-title">Detail More.<br>Pay Less. Every Time.</div>
     <p class="commercial-desc">Our Weekly, Bi-Weekly, and Monthly subscription plans lock in priority scheduling and a discount off standard rates — so your vehicle is always a few days away from perfect. No contracts. Cancel anytime.</p>
   </div>
-  <div class="commercial-btns">
-    <a href="{{ '/subscriptions/' | relative_url }}" class="btn-gold-outline">View Plans &rarr;</a>
-    <a href="{{ '/commercial/' | relative_url }}" class="btn-outline-light">Commercial Accounts &rarr;</a>
-  </div>
+  <a href="{{ '/subscriptions/' | relative_url }}" class="btn-gold-outline">View Plans &rarr;</a>
 </div>
 
 <!-- ───── FAQ ───── -->
