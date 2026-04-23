@@ -27,25 +27,16 @@
   {% endif %}
 </nav>
 
-<!-- Mobile full-screen menu -->
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <div class="mobile-menu-inner">
-    <div class="mobile-menu-eyebrow">
-      <div class="mobile-menu-eyebrow-line"></div>
-      <span>Navigation</span>
-    </div>
-    <ul class="mobile-menu-links">
-      <li style="--i:0"><a href="{{ '/' | relative_url }}"{% if p == '/' %} class="active"{% endif %} onclick="closeMobileMenu()">Home</a></li>
-      <li style="--i:1"><a href="{{ '/services/' | relative_url }}"{% if p contains '/services' %} class="active"{% endif %} onclick="closeMobileMenu()">Services</a></li>
-      <li style="--i:2"><a href="{{ '/subscriptions/' | relative_url }}"{% if p contains '/subscriptions' %} class="active"{% endif %} onclick="closeMobileMenu()">Plans</a></li>
-      <li style="--i:3"><a href="#reviews" onclick="closeMobileMenu()">Reviews</a></li>
-      <li style="--i:4"><a href="{{ '/contact/' | relative_url }}"{% if p contains '/contact' %} class="active"{% endif %} onclick="closeMobileMenu()">Contact</a></li>
-    </ul>
-    <div class="mobile-menu-footer">
-      <a href="{{ '/booking/' | relative_url }}" class="mobile-menu-cta" onclick="closeMobileMenu()">Book a Detail</a>
-      <p class="mobile-menu-note">North Atlanta, GA &nbsp;·&nbsp; Mon–Sun 8AM–6PM</p>
-    </div>
-  </div>
+<!-- Mobile dropdown menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu-links">
+    <li><a href="{{ '/' | relative_url }}"{% if p == '/' %} class="active"{% endif %} onclick="closeMobileMenu()">Home</a></li>
+    <li><a href="{{ '/services/' | relative_url }}"{% if p contains '/services' %} class="active"{% endif %} onclick="closeMobileMenu()">Services</a></li>
+    <li><a href="{{ '/subscriptions/' | relative_url }}"{% if p contains '/subscriptions' %} class="active"{% endif %} onclick="closeMobileMenu()">Plans</a></li>
+    <li><a href="#reviews" onclick="closeMobileMenu()">Reviews</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}"{% if p contains '/contact' %} class="active"{% endif %} onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+  <a href="{{ '/booking/' | relative_url }}" class="mobile-menu-cta" onclick="closeMobileMenu()">Book Now</a>
 </div>
 
 <script>
@@ -54,13 +45,17 @@
     var burger = document.getElementById('nav-hamburger');
     var open   = menu.classList.toggle('open');
     burger.classList.toggle('open', open);
-    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
-    document.body.style.overflow = open ? 'hidden' : '';
   }
   function closeMobileMenu() {
     document.getElementById('mobile-menu').classList.remove('open');
     document.getElementById('nav-hamburger').classList.remove('open');
-    document.getElementById('mobile-menu').setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
   }
+  // Close on outside tap
+  document.addEventListener('click', function(e) {
+    var menu   = document.getElementById('mobile-menu');
+    var burger = document.getElementById('nav-hamburger');
+    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
 </script>

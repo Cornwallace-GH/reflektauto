@@ -75,6 +75,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 12px;
+  position: relative;
 }
 
 // ── Hamburger button ──
@@ -100,9 +101,7 @@ nav {
     height: 1.5px;
     background: var(--white);
     border-radius: 2px;
-    transition: transform 0.3s cubic-bezier(0.23,1,0.32,1),
-                opacity 0.2s ease,
-                width 0.3s ease;
+    transition: transform 0.25s ease, opacity 0.2s ease, width 0.25s ease;
     transform-origin: center;
   }
 
@@ -117,138 +116,68 @@ nav {
   }
 }
 
-// ── Full-screen mobile menu ──
+// ── Mobile dropdown menu ──
 .mobile-menu {
   display: none;
-  position: fixed;
-  top: 68px; left: 0; right: 0; bottom: 0;
-  z-index: 99;
-  background: var(--black);
-  border-top: 1px solid var(--border);
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.4s cubic-bezier(0.23,1,0.32,1);
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  background: var(--black-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 200;
 
   &.open {
-    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
-.mobile-menu-inner {
-  height: 100%;
-  padding: 40px 7%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-// Eyebrow inside menu
-.mobile-menu-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 36px;
-  span {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-  }
-}
-.mobile-menu-eyebrow-line {
-  width: 24px;
-  height: 1px;
-  background: var(--gold);
-}
-
-// Nav links — large Bebas Neue
 .mobile-menu-links {
   list-style: none;
-  flex: 1;
+  padding: 8px 0;
 
   li {
-    border-bottom: 1px solid rgba(201,168,76,0.1);
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-    transition-delay: calc(var(--i) * 60ms + 80ms);
-  }
+    a {
+      display: block;
+      padding: 11px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s, background 0.15s;
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 42px;
-    letter-spacing: 2px;
-    color: rgba(245,244,240,0.45);
-    text-decoration: none;
-    line-height: 1;
-    transition: color 0.2s, padding-left 0.2s;
-
-    &::after {
-      content: '→';
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      color: var(--gold);
-      opacity: 0;
-      transform: translateX(-8px);
-      transition: opacity 0.2s, transform 0.2s;
+      &:hover { color: var(--white); background: rgba(245,244,240,0.05); }
+      &.active { color: var(--gold); }
     }
-
-    &:hover, &.active {
-      color: var(--white);
-      padding-left: 8px;
-      &::after { opacity: 1; transform: translateX(0); }
-    }
-    &.active { color: var(--gold); }
   }
-}
-
-// Animate links in when menu opens
-.mobile-menu.open .mobile-menu-links li {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-// Footer: CTA + tagline
-.mobile-menu-footer {
-  padding-top: 32px;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.35s ease 0.42s, transform 0.35s ease 0.42s;
-}
-.mobile-menu.open .mobile-menu-footer {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .mobile-menu-cta {
   display: block;
-  width: 100%;
+  margin: 8px 12px 12px;
   text-align: center;
   background: var(--gold);
   color: var(--black);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 16px;
-  border-radius: 6px;
+  padding: 11px 16px;
+  border-radius: 4px;
   text-decoration: none;
   transition: background 0.2s;
-  margin-bottom: 16px;
   &:hover { background: var(--gold-light); }
-}
-
-.mobile-menu-note {
-  text-align: center;
-  font-size: 11px;
-  color: rgba(245,244,240,0.25);
-  letter-spacing: 0.5px;
-  font-weight: 300;
 }
 
 // ── Responsive: show hamburger, hide desktop links ──
