@@ -25,24 +25,11 @@ og_description: "Schedule your professional mobile detailing appointment online.
 <div class="booking-section">
   <div class="booking-layout">
 
-    <!-- Square Appointments embed
-         Replace YOUR_SQUARE_APPOINTMENTS_URL with your actual Square booking URL:
-         Square Dashboard → Appointments → Booking Sites
-         URL format: https://square.site/book/XXXXXXX/reflekt-auto-care -->
-    <div class="square-wrap" id="square-booking-wrap">
-      <iframe
-        id="square-booking-frame"
-        src="YOUR_SQUARE_APPOINTMENTS_URL"
-        title="Book an appointment with Reflekt Auto Care"
-        allow="payment"
-        loading="lazy">
-      </iframe>
-      <div class="square-wrap-fallback" id="square-fallback">
-        <p>Click below to open the booking page and pay your deposit — all in one step through Square.</p>
-        <a href="YOUR_SQUARE_APPOINTMENTS_URL" class="sq-book-btn" target="_blank" rel="noopener">
-          Book &amp; Pay Now &rarr;
-        </a>
-      </div>
+    <!-- Square Appointments Widget -->
+    <div class="square-wrap">
+      <!-- Start Square Appointments Embed Code -->
+      <script src='https://square.site/appointments/buyer/widget/6t3dr4u3tg3109/LSMK9Z81Z1PDK.js'></script>
+      <!-- End Square Appointments Embed Code -->
     </div>
 
     <div class="info-panel">
@@ -80,22 +67,3 @@ og_description: "Schedule your professional mobile detailing appointment online.
   <a href="{{ '/services/' | relative_url }}" class="btn-black">View Services &rarr;</a>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const frame = document.getElementById('square-booking-frame');
-    const fallback = document.getElementById('square-fallback');
-    if (!frame) return;
-    const src = frame.getAttribute('src') || '';
-    if (src.includes('YOUR_SQUARE_APPOINTMENTS_URL') || src === '' || src === '#') {
-      frame.style.display = 'none';
-      if (fallback) {
-        fallback.style.display = 'block';
-        const fallbackLink = fallback.querySelector('a');
-        if (fallbackLink) fallbackLink.href = '#';
-      }
-    } else {
-      if (fallback) fallback.style.display = 'none';
-      frame.style.display = 'block';
-    }
-  });
-</script>
