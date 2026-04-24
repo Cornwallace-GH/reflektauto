@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — Rover Detail | Mobile Detailing North Atlanta, GA</title>
-<meta name="description" content="Hand-performed mobile detailing services in North Atlanta, GA. Interior, exterior, paint correction, ceramic coating, and full detail — tiered pricing by vehicle size.">
-<meta name="keywords" content="mobile detailing services Atlanta, car detailing prices North Atlanta, paint correction, ceramic coating, interior detail, exterior detail Georgia">
+<title>Detailing Services — Rover Detail | North Atlanta, GA</title>
+<meta name="description" content="Mobile detailing services in North Atlanta — interior, exterior, full detail, paint correction & ceramic coating. Tiered pricing. We come to you.">
+<meta name="keywords" content="car detailing services North Atlanta, interior detail Alpharetta, exterior detail GA, paint correction Atlanta, ceramic coating North Atlanta, mobile detailing prices">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://roverdetail.com/services/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://roverdetail.com/services/">
-<meta property="og:title" content="Services — Rover Detail | Mobile Detailing North Atlanta, GA">
-<meta property="og:description" content="Five core detailing services with tiered pricing by vehicle size. Interior, exterior, full detail, paint correction, and ceramic coating — we come to you.">
+<meta property="og:title" content="Detailing Services — Rover Detail | North Atlanta, GA">
+<meta property="og:description" content="Five detailing services with tiered pricing. We come to you anywhere in North Atlanta.">
 <meta property="og:image" content="http://localhost:4000/hero-bg.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Services — Rover Detail | Mobile Detailing North Atlanta, GA">
-<meta name="twitter:description" content="Five core detailing services with tiered pricing by vehicle size. Interior, exterior, full detail, paint correction, and ceramic coating — we come to you.">
+<meta name="twitter:title" content="Detailing Services — Rover Detail | North Atlanta, GA">
+<meta name="twitter:description" content="Five detailing services with tiered pricing. We come to you anywhere in North Atlanta.">
 <meta name="twitter:image" content="http://localhost:4000/hero-bg.jpg">
 
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Rover Detail — Services",
+  "name": "Rover Detail — Detailing Services",
   "provider": { "@type": "LocalBusiness", "name": "Rover Detail" },
   "areaServed": { "@type": "State", "name": "North Atlanta, Georgia" },
   "serviceType": ["Interior Detailing", "Exterior Detailing", "Full Detail", "Paint Correction", "Ceramic Coating"]
@@ -99,14 +99,22 @@
 
 
 <!-- ───── HERO ───── -->
-<section class="svc-hero">
-  <h1>Our Services</h1>
-  <p class="hero-sub">Hand-performed. Professional-grade. We come to you.</p>
-</section>
+<div class="page-header plans-header">
+  <div class="plans-header-personal">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Our Services</span></div>
+    <h1>Expert Detail.<br>At Your Door.</h1>
+    <p>Five services, each with tiered options to match your vehicle's condition. Pick a tier inside each card to see what's included.</p>
+  </div>
+  <div class="plans-header-commercial">
+    <div class="commercial-eyebrow">Recurring Plans</div>
+    <div class="commercial-title">Always Clean.<br>Never Worry.</div>
+    <p class="commercial-desc">Weekly, Bi-Weekly, and Monthly plans. Priority scheduling, locked-in savings. No contracts.</p>
+    <a href="/subscriptions/" class="btn-gold-outline" style="margin-top: 24px; display: inline-block;">View Plans &rarr;</a>
+  </div>
+</div>
 
 <!-- ───── SERVICES GRID ───── -->
 <section class="services-section">
-
   <div class="vehicle-select vehicle-select--section">
     <span class="vehicle-label">Vehicle Size:</span>
     <button class="vehicle-btn active" data-size="0" onclick="setSize(0)">Sedan / Coupe</button>
@@ -117,7 +125,7 @@
   <div class="service-grid">
 
     <!-- INTERIOR DETAIL -->
-    <div class="svc-card" id="interior" data-service="interior">
+    <div class="svc-card" data-service="interior">
       <div class="svc-tag">Interior</div>
       <h3 class="svc-title">Interior Detail</h3>
       <p class="svc-desc">A deep clean of every cabin surface — from vacuumed carpets and wiped panels to steam-cleaned upholstery and odor elimination.</p>
@@ -141,36 +149,6 @@
         <li>Vents and tight spaces cleaned</li>
         <li>Interior glass cleaned streak-free</li>
         <li>Air freshener applied</li>
-      </ul>
-
-      <a href="/booking/" class="svc-cta primary">Book This Service</a>
-    </div>
-
-    <!-- EXTERIOR DETAIL -->
-    <div class="svc-card" id="exterior" data-service="exterior">
-      <div class="svc-tag">Exterior</div>
-      <h3 class="svc-title">Exterior Detail</h3>
-      <p class="svc-desc">A proper hand wash with attention a machine can't give — safe technique, clay bar decontamination, and a lasting hydrophobic finish.</p>
-
-      <div class="tier-row">
-        <button class="tier-btn active" data-tier="silver" onclick="setTier('exterior','silver')">Silver</button>
-        <button class="tier-btn" data-tier="gold" onclick="setTier('exterior','gold')">Gold</button>
-        <button class="tier-btn" data-tier="platinum" onclick="setTier('exterior','platinum')">Platinum</button>
-      </div>
-
-      <div class="price-line">
-        <span class="price-amt" data-price="exterior">$100</span>
-        <span class="price-unit">starting</span>
-      </div>
-      <div class="price-note" data-note="exterior">Silver &middot; sedan / coupe</div>
-
-      <div class="includes-label">What's Included</div>
-      <ul class="includes-list" data-includes="exterior">
-        <li>Safe pre-rinse and two-bucket hand wash</li>
-        <li>Wheel face and tire cleaned</li>
-        <li>Tire dressing applied</li>
-        <li>Exterior glass cleaned streak-free</li>
-        <li>Quick-detail spray for surface gloss</li>
       </ul>
 
       <a href="/booking/" class="svc-cta primary">Book This Service</a>
@@ -208,8 +186,38 @@
       <a href="/booking/" class="svc-cta primary">Book This Service</a>
     </div>
 
+    <!-- EXTERIOR DETAIL -->
+    <div class="svc-card" data-service="exterior">
+      <div class="svc-tag">Exterior</div>
+      <h3 class="svc-title">Exterior Detail</h3>
+      <p class="svc-desc">A proper hand wash with attention a machine can't give — safe technique, clay bar decontamination, and a lasting hydrophobic finish.</p>
+
+      <div class="tier-row">
+        <button class="tier-btn active" data-tier="silver" onclick="setTier('exterior','silver')">Silver</button>
+        <button class="tier-btn" data-tier="gold" onclick="setTier('exterior','gold')">Gold</button>
+        <button class="tier-btn" data-tier="platinum" onclick="setTier('exterior','platinum')">Platinum</button>
+      </div>
+
+      <div class="price-line">
+        <span class="price-amt" data-price="exterior">$100</span>
+        <span class="price-unit">starting</span>
+      </div>
+      <div class="price-note" data-note="exterior">Silver &middot; sedan / coupe</div>
+
+      <div class="includes-label">What's Included</div>
+      <ul class="includes-list" data-includes="exterior">
+        <li>Safe pre-rinse and two-bucket hand wash</li>
+        <li>Wheel face and tire cleaned</li>
+        <li>Tire dressing applied</li>
+        <li>Exterior glass cleaned streak-free</li>
+        <li>Quick-detail spray for surface gloss</li>
+      </ul>
+
+      <a href="/booking/" class="svc-cta primary">Book This Service</a>
+    </div>
+
     <!-- PAINT CORRECTION (QUOTE) -->
-    <div class="svc-card" id="paint" data-service="paint">
+    <div class="svc-card" data-service="paint">
       <div class="svc-tag">Paint &amp; Coat</div>
       <h3 class="svc-title">Paint Correction</h3>
       <p class="svc-desc">Machine polishing that physically removes swirl marks, light scratches, water spots, and oxidation — restoring a mirror-like finish.</p>
@@ -233,7 +241,7 @@
     </div>
 
     <!-- CERAMIC COATING (QUOTE) -->
-    <div class="svc-card" id="ceramic" data-service="ceramic">
+    <div class="svc-card" data-service="ceramic">
       <div class="svc-tag">Paint &amp; Coat</div>
       <h3 class="svc-title">Ceramic Coating</h3>
       <p class="svc-desc">A nano-ceramic layer that bonds to your paint — years of protection against UV, contaminants, and water spots, with unmatched deep gloss.</p>
@@ -294,7 +302,7 @@
   <div class="commercial-text">
     <div class="commercial-eyebrow">Recurring Plans</div>
     <div class="commercial-title">Detail More.<br>Pay Less. Every Time.</div>
-    <p class="commercial-desc">Our Weekly, Bi-Weekly, and Monthly subscription plans lock in priority scheduling and a discount off standard rates — so your vehicle is always a few days away from perfect. No contracts. Cancel anytime.</p>
+    <p class="commercial-desc">Weekly, Bi-Weekly, and Monthly plans. Priority scheduling and savings, locked in. No contracts.</p>
   </div>
   <a href="/subscriptions/" class="btn-gold-outline">View Plans &rarr;</a>
 </div>
@@ -481,26 +489,21 @@
 
 
 <footer>
-  <div class="footer-logo">ROVER <span>DETAIL</span></div>
-  <p class="footer-tagline">North Atlanta, GA — Mobile Auto Detailing</p>
+  <div class="footer-logo">REFL<span>E</span>KT</div>
+  <p>&copy; 2026 Reflekt Auto Care &mdash; North Atlanta, GA</p>
   <div class="footer-social">
     <a href="https://www.instagram.com/reflekt.autocare" target="_blank" rel="noopener" aria-label="Instagram">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
     </a>
-    <a href="https://www.facebook.com/reflektautocare" target="_blank" rel="noopener" aria-label="Facebook">
+    <a href="https://www.facebook.com/reflekt.autocare" target="_blank" rel="noopener" aria-label="Facebook">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-    </a>
-    <a href="https://www.tiktok.com/@reflektautocare" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08z"/></svg>
-    </a>
   </div>
   <div class="footer-links">
     <a href="/services/">Services</a>
     <a href="/subscriptions/">Plans</a>
-    <a href="/contact/">Contact</a>
-    <a href="/booking/">Book Now</a>
+    <a href="#">Privacy</a>
+    <a href="mailto:reflektautocare.atl@gmail.com">Contact</a>
   </div>
-  <p class="footer-copy">&copy; 2026 Rover Detail &mdash; All rights reserved.</p>
 </footer>
 
 
