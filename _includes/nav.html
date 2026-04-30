@@ -19,7 +19,7 @@
       <li><a href="{{ '/contact/' | relative_url }}"{% if p contains '/contact' %} class="active"{% endif %}>Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="{{ '/booking/' | relative_url }}" class="nav-cta{% if p contains '/booking' %} active{% endif %}">Book Now</a>
+      <a href="{{ '/services/' | relative_url }}" class="nav-cta{% if p contains '/services' %} active{% endif %}">Book Now</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
         <span></span><span></span><span></span>
       </button>
@@ -42,7 +42,7 @@
     <a href="{{ '/reviews/' | relative_url }}"{% if p contains '/reviews' %} class="active"{% endif %} onclick="closeMobileMenu()">Reviews</a>
     <a href="{{ '/contact/' | relative_url }}"{% if p contains '/contact' %} class="active"{% endif %} onclick="closeMobileMenu()">Contact</a>
   </nav>
-  <a href="{{ '/booking/' | relative_url }}" class="mobile-overlay-cta" onclick="closeMobileMenu()">Book Now</a>
+  <a href="{{ '/services/' | relative_url }}" class="mobile-overlay-cta" onclick="closeMobileMenu()">Book Now</a>
 </div>
 
 <script>
