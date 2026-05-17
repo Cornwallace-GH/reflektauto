@@ -58,6 +58,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="interior">Silver &middot; sedan / coupe</div>
+      <div class="duration-note" data-duration="interior">~2 hr</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="interior">
@@ -89,6 +90,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="full">Silver &middot; sedan / coupe &middot; saves vs. separate bookings</div>
+      <div class="duration-note" data-duration="full">~3 hr 30 min</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="full">
@@ -117,6 +119,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="exterior">Silver &middot; sedan / coupe</div>
+      <div class="duration-note" data-duration="exterior">~1 hr 30 min</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="exterior">
@@ -349,6 +352,20 @@ structured_data: >
   let activeSize = 0;
   const activeTier = { interior: 'silver', exterior: 'silver', full: 'silver' };
 
+  // Durations in minutes per service per size [sedan, suv, truck]
+  const DURATIONS = {
+    interior: [120, 150, 180],
+    exterior: [90, 120, 150],
+    full:     [210, 255, 300]
+  };
+
+  function fmtDuration(mins) {
+    const h = Math.floor(mins / 60), m = mins % 60;
+    if (h > 0 && m > 0) return h + ' hr ' + m + ' min';
+    if (h > 0) return h + ' hr';
+    return m + ' min';
+  }
+
   function setSize(i) {
     activeSize = i;
     document.querySelectorAll('.vehicle-btn').forEach((b, idx) => b.classList.toggle('active', idx === i));
@@ -367,15 +384,19 @@ structured_data: >
     const card = document.querySelector('.svc-card[data-service="' + svc + '"]');
     if (!card) return;
     const tier = activeTier[svc];
-    const priceEl = card.querySelector('[data-price]');
-    const noteEl = card.querySelector('[data-note]');
-    const listEl = card.querySelector('[data-includes]');
+    const priceEl    = card.querySelector('[data-price]');
+    const noteEl     = card.querySelector('[data-note]');
+    const durationEl = card.querySelector('[data-duration]');
+    const listEl     = card.querySelector('[data-includes]');
 
     if (priceEl) priceEl.textContent = PRICING[svc][tier][activeSize];
     if (noteEl) {
       const tierLabel = tier.charAt(0).toUpperCase() + tier.slice(1);
       const extra = (svc === 'full') ? ' \u00b7 saves vs. separate bookings' : '';
       noteEl.textContent = tierLabel + ' \u00b7 ' + SIZE_LABEL[activeSize] + extra;
+    }
+    if (durationEl && DURATIONS[svc]) {
+      durationEl.textContent = '~' + fmtDuration(DURATIONS[svc][activeSize]);
     }
     if (listEl) {
       listEl.innerHTML = TIER_INCLUDES[svc][tier].map(item => '<li>' + item + '</li>').join('');
