@@ -58,7 +58,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="interior">Silver &middot; sedan / coupe</div>
-      <div class="duration-note" data-duration="interior">~2 hr</div>
+      <div class="duration-note" data-duration="interior">~2 hr – 3 hr depending on vehicle size</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="interior">
@@ -90,7 +90,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="full">Silver &middot; sedan / coupe &middot; saves vs. separate bookings</div>
-      <div class="duration-note" data-duration="full">~3 hr 30 min</div>
+      <div class="duration-note" data-duration="full">~3 hr 30 min – 5 hr depending on vehicle size</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="full">
@@ -119,7 +119,7 @@ structured_data: >
         <span class="price-unit">starting</span>
       </div>
       <div class="price-note" data-note="exterior">Silver &middot; sedan / coupe</div>
-      <div class="duration-note" data-duration="exterior">~1 hr 30 min</div>
+      <div class="duration-note" data-duration="exterior">~1 hr 30 min – 2 hr 30 min depending on vehicle size</div>
 
       <div class="includes-label">What's Included</div>
       <ul class="includes-list" data-includes="exterior">
@@ -396,7 +396,14 @@ structured_data: >
       noteEl.textContent = tierLabel + ' \u00b7 ' + SIZE_LABEL[activeSize] + extra;
     }
     if (durationEl && DURATIONS[svc]) {
-      durationEl.textContent = '~' + fmtDuration(DURATIONS[svc][activeSize]);
+      const d = DURATIONS[svc];
+      if (activeSize === 0) {
+        // Sedan selected — show full range
+        durationEl.textContent = '~' + fmtDuration(d[0]) + ' – ' + fmtDuration(d[2]) + ' depending on vehicle size';
+      } else {
+        // Specific size selected — show exact time
+        durationEl.textContent = '~' + fmtDuration(d[activeSize]) + ' for your vehicle size';
+      }
     }
     if (listEl) {
       listEl.innerHTML = TIER_INCLUDES[svc][tier].map(item => '<li>' + item + '</li>').join('');
