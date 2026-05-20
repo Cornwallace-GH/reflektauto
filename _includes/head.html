@@ -7,19 +7,12 @@
 <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
 {% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}">{% endif %}
 
-<meta name="google-site-verification" content="YPem_uz1b3cN8N6Vu-shSaf1Uv4Et-etyJm93ytPEfc" />
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.canonical | default: site.url }}">
 <meta property="og:title" content="{{ page.og_title | default: page.title }}">
 <meta property="og:description" content="{{ page.og_description | default: page.description }}">
-<meta property="og:image" content="{{ site.url }}/favicon-512.png">
+<meta property="og:image" content="{{ site.url }}/hero-bg.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
